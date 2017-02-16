@@ -1,0 +1,117 @@
+.main-page-resize {
+  margin: 0 auto;
+  width: 600px;
+}
+
+body.main-page {
+  background: rgb(250, 251, 252);
+}
+
+header.main-page {
+  margin: 0;
+}
+
+main.main-page {
+  max-width: 100%;
+  padding: 156px 0 98px;
+}
+
+div.main-page-title {
+  margin-bottom: 112px;
+}
+
+div.main-page-title img {
+  display: block;
+  width: 175px;
+  height: auto;
+  margin: 0 auto 58px;
+}
+
+div.main-page-title h1 {
+  margin-bottom: 12px;
+  text-align: center;
+  color: #5D6063;
+  font: 400 57px/60px 'Roboto';
+  text-transform: uppercase;
+}
+
+div.main-page-title p.parentheses {
+  position: relative;
+  margin: 0 0 10px 0;
+  text-align: center;
+  color: #5D6063;
+  font: 400 24px/28px 'Roboto';
+  text-transform: uppercase;
+}
+
+div.main-page-title p.parentheses:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  display: block;
+  border-bottom: 1px solid #959ba0;
+  height: 50%;
+  width: 85px;
+}
+div.main-page-title p.parentheses:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 0;
+  display: block;
+  border-bottom: 1px solid #959ba0;
+  height: 50%;
+  width: 85px; 
+}
+
+div.main-page-title p.main-page-subtitle {
+  margin: 0;
+  text-align: center;
+  color: #5D6063;
+  font: 400 italic 18px/28px 'Century';
+}
+
+section.chapter-item {
+  padding: 90px 0 84px;
+  border-top: 1px solid #EAEDF0;
+}
+
+.chapter-wrapper {
+  display: flex;
+  max-width: 580px;
+}
+
+section.chapter-item:nth-child(odd) .chapter-wrapper {
+  flex-direction: row-reverse;
+}
+
+.chapter-text {
+  font: normal 18px/28px 'Century', 'Roboto';
+  color: rgba(93, 96, 99, 1);
+}
+
+.chapter-heading {
+  margin-bottom: 5px;
+  font: 500 24px/1em 'Roboto';
+}
+
+section:nth-child(odd).chapter-item .chapter-heading {
+  margin-left: 40px;
+}
+
+section:nth-child(even).chapter-item .chapter-description {
+  margin-right: 40px;
+  font: normal 18px/28px 'Century', 'Roboto';
+}
+
+section:nth-child(odd).chapter-item .chapter-description {
+  flex-direction: row-reverse;
+  margin-left: 40px;
+}
+
+img.chapter-icon {
+  margin-top: 18px;
+  font-size: 0;
+  line-height: 0;
+}
