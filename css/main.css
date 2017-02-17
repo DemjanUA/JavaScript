@@ -104,6 +104,9 @@ main {
 /*************************************/
 header {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -111,6 +114,19 @@ header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.137255);
   margin-bottom: 90px;
   background: white;
+  z-index: 999;
+}
+
+header a.logo {
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  height: 80%;
+}
+
+header a.logo img {
+  height: 100%;
+  width: auto;
 }
 
 main {
