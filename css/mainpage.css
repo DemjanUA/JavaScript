@@ -9,6 +9,8 @@ body.main-page {
 
 header.main-page {
   margin: 0;
+  font: 400 18px/1em 'Roboto';
+  color: #5D6063;
 }
 
 main.main-page {

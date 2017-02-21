@@ -32,7 +32,7 @@ div, section, article {
   box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,pre {
   margin: 0;
 }
 
@@ -102,6 +102,12 @@ main {
   margin: 0 auto;
 }
 /*************************************/
+pre {
+  padding-bottom: 16px;
+}
+code.hljs {
+  padding: 13px 0.5em;
+}
 header {
   position: fixed;
   display: flex;
@@ -195,6 +201,14 @@ section .side-article p {
   font: 400 14px/24px 'Roboto', sans-serif;
 }
 
+section .side-article pre {
+  font-size: 14px;
+}
+
+section .side-article code.hljs {
+    padding: 8px 0.5em;
+}
+
 section .main-article p {
   margin: 0;
   padding-bottom: 16px;
@@ -210,9 +224,17 @@ section article h3 {
   border-top: 1px solid rgba(0,0,0,0.4);
 }
 
+section article h4 {
+  margin: 0;
+  padding: 14px 0 12px;
+  font: 500 14px/20px 'Roboto', sans-serif;
+  color: rgba(0,0,0,0.87);
+}
+
 section article .article-images {
   display: block;
   width: 720px;
+  margin-bottom: 16px;
 }
 
 section article .article-images img {
@@ -220,4 +242,14 @@ section article .article-images img {
   font-size: 0;
   line-height: 0;
   max-width: 100%;
+}
+
+section article .article-images.small-img img {
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+section article .article-images.small-img-7 img {
+  margin: 0 auto;
+  max-width: 70%;
 }
