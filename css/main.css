@@ -253,3 +253,22 @@ section article .article-images.small-img-7 img {
   margin: 0 auto;
   max-width: 70%;
 }
+
+
+section article div.object-property {
+  margin-left: 15px;
+}
+
+section article div.object-property h5 {
+  margin-bottom: 3px;
+  font: 500 14px/20px 'Roboto', sans-serif;
+  color: rgba(255,82,82,0.87);
+}
+
+section article div.object-property p {
+  padding-bottom: 5px;
+}
+
+section article div.object-method {
+  
+}
