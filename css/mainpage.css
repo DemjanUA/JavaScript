@@ -15,7 +15,7 @@ header.main-page {
 
 main.main-page {
   max-width: 100%;
-  padding: 156px 0 98px;
+  padding: 156px 0 0;
 }
 
 div.main-page-title {
@@ -112,7 +112,7 @@ section:nth-child(odd).chapter-item .chapter-heading {
 
 section:nth-child(even).chapter-item .chapter-description {
   margin-right: 40px;
-  font: normal 18px/28px 'Century';
+  font: normal 17px/28px 'Century';
 }
 
 section:nth-child(odd).chapter-item .chapter-description {

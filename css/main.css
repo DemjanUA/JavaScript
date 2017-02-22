@@ -136,7 +136,7 @@ header a.logo img {
 }
 
 main {
-  padding: 128px 60px 48px;
+  padding: 128px 0 48px;
   max-width: 1200px;
 }
 
@@ -252,6 +252,11 @@ section article .article-images.small-img img {
 section article .article-images.small-img-7 img {
   margin: 0 auto;
   max-width: 70%;
+}
+
+section article .article-images.small-img-5 img {
+  margin: 0 auto;
+  max-width: 50%;
 }
 
 
