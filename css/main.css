@@ -255,20 +255,42 @@ section article .article-images.small-img-7 img {
 }
 
 
-section article div.object-property {
+section article div.object-property,
+section article div.object-method {
   margin-left: 15px;
 }
 
-section article div.object-property h5 {
+section article div.object-property h5,
+section article div.object-method h5 {
   margin-bottom: 3px;
   font: 500 14px/20px 'Roboto', sans-serif;
   color: rgba(255,82,82,0.87);
 }
 
-section article div.object-property p {
+section article div.object-property p,
+section article div.object-method p {
   padding-bottom: 5px;
 }
 
-section article div.object-method {
-  
+section article.main-article p.warning {
+  padding: 0 0 3px 10px;
+  padding-left: 10px;
+  margin-bottom: 16px;
+  border-left: 5px solid rgb(224, 102, 102);
+} 
+
+section article.main-article .object-method-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section article.main-article .object-method-wrapper div.object-method {
+  width: 33.333333%;
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+
+section article.main-article .object-method-wrapper div.object-method p {
+  width: 90%;
+  font-size: 14px;
 }
