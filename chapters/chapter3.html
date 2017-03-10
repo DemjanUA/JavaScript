@@ -60,7 +60,7 @@
                 </p>
 <!-- example --><pre><code class="javascript">'use strict';
 <!-- example -->var a = prompt('Введите значение a: ', '');
-<!-- example -->console.log('a < 10 -', a < 10);
+<!-- example -->console.log('a &lt; 10 -', a &lt; 10);
 <!-- example -->console.log('a > 10 -', a > 10);
 <!-- example -->console.log('a = 10 -', a == 10);
 <!-- example -->console.log('a ≠ 10 -', a != 10);
@@ -115,7 +115,7 @@
             <article class="side-article fr">
                 <h3>2.3* Сравнение с null и undefined</h3>
                 <p>
-                    Проблемы со специальными значениями возможны, когда к переменной применяется операция сравнения > < <= >=, а у неё может быть как численное значение, так и null/undefined.
+                    Проблемы со специальными значениями возможны, когда к переменной применяется операция сравнения > &lt; &lt;= >=, а у неё может быть как численное значение, так и null/undefined.
                 </p>
                 <p>
                     <strong>Интуитивно кажется, что null/undefined эквивалентны нулю, но это не так.</strong>
@@ -146,7 +146,7 @@
                     Как такое возможно? Если нечто «больше или равно нулю», то резонно полагать, что оно либо больше, либо равно. Но здесь это не так.
                 </p>
                 <p>
-                    Дело в том, что алгоритмы проверки равенства == и сравнения >= > < <= работают по-разному.
+                    Дело в том, что алгоритмы проверки равенства == и сравнения >= > &lt; &lt;= работают по-разному.
                 </p>
                 <p>
                     Сравнение честно приводит к числу, получается ноль. А при проверке равенства значения null и undefined обрабатываются особым образом: они равны друг другу, но не равны чему-то ещё.
@@ -160,18 +160,18 @@
                 </p>
 <!-- example --><pre><code class="javascript">'use strict';
 <!-- example -->alert( undefined > 0 ); // false (1)
-<!-- example -->alert( undefined < 0 ); // false (2)
+<!-- example -->alert( undefined &lt; 0 ); // false (2)
 <!-- example -->alert( undefined == 0 ); // false (3)
 <!-- example --></code></pre>
                 <p>
-                    - Сравнения (1) и (2) дают false потому, что undefined при преобразовании к числу даёт NaN. А значение NaN по стандарту устроено так, что сравнения ==, <, >, <=, >= и даже === с ним возвращают false.<br>
+                    - Сравнения (1) и (2) дают false потому, что undefined при преобразовании к числу даёт NaN. А значение NaN по стандарту устроено так, что сравнения ==, &lt;, >, &lt;=, >= и даже === с ним возвращают false.<br>
                     - Проверка равенства (3) даёт false, потому что в стандарте явно прописано, что undefined равно лишь null и ничему другому.
                 </p>
                 <p>
                     <strong>Вывод: любые сравнения с undefined/null, кроме точного ===, следует делать с осторожностью.</strong>
                 </p>
                 <p>
-                    Желательно не использовать сравнения >= > < <= с ними, во избежание ошибок в коде.
+                    Желательно не использовать сравнения >= > &lt; &lt;= с ними, во избежание ошибок в коде.
                 </p>
             </article>
         </section>
@@ -241,7 +241,7 @@
                     Синтаксис оператора if показан на рисунке:
                 </p>
                 <div class="article-images small-img">
-                    <img src="images/if syntax images.jpg" alt="">
+                    <img src="images/if syntax images.jpg" alt="example img">
                 </div>
                 <h4>3.3.3 Оператор if...else</h4>
                 <p>
@@ -383,7 +383,7 @@
                 </p>
 <!-- example --><pre><code class="javascript">'use strict';
 <!-- example -->var alpha = 1, beta = 2;
-<!-- example -->if (alpha < beta) {
+<!-- example -->if (alpha &lt; beta) {
 <!-- example -->    min = alpha;
 <!-- example -->} else {
 <!-- example -->    min = beta;
@@ -396,13 +396,13 @@
                 </p>
 <!-- example --><pre><code class="javascript">'use strict';
 <!-- example -->var alpha = 1, beta = 2;
-<!-- example -->min = (alpha < beta) ? alpha : beta;
+<!-- example -->min = (alpha &lt; beta) ? alpha : beta;
 <!-- example --></code></pre>
                 <p>
                     Правая часть оператора представляет собой условное выражение:
                 </p>
 <!-- example --><pre><code class="javascript">'use strict';
-<!-- example -->(alpha < beta) ? alpha : beta; // условное выражение
+<!-- example -->(alpha &lt; beta) ? alpha : beta; // условное выражение
 <!-- example --></code></pre>
                 <p>
                     Если значение проверяемого условия истинно, то условное выражение становится равным значению alpha; в противном случае оно становится равным beta. Скобки вокруг проверяемого условия не обязательны, но их довольно часто употребляют для того, чтобы упростить визуальное восприятие этого оператора. 
@@ -425,9 +425,9 @@
 <pre><code class="javascript"><!--
 -->'use strict';
 var age = prompt('Ваш возраст?', 18);
-var message = (age < 3) ? 'Здравствуй, малыш!' :
-    (age < 18) ? 'Привет!' :
-        (age < 100) ? 'Здравствуйте!' :
+var message = (age &lt; 3) ? 'Здравствуй, малыш!' :
+    (age &lt; 18) ? 'Привет!' :
+        (age &lt; 100) ? 'Здравствуйте!' :
             'Какой необычный возраст!';
 alert( message );
 </code></pre>
@@ -435,7 +435,7 @@ alert( message );
                     Поначалу может быть сложно понять, что происходит. Однако, внимательно приглядевшись, мы замечаем, что это обычная последовательная проверка.
                 </p>
                 <p>
-                    Вопросительный знак проверяет сначала age < 3, если верно – возвращает 'Здравствуй, малыш!', если нет – идет за двоеточие и проверяет age < 18. Если это верно – возвращает 'Привет!', иначе проверка age < 100 и 'Здравствуйте! И наконец, если ничего из этого не верно, то 'Какой необычный              возраст!'.
+                    Вопросительный знак проверяет сначала age &lt; 3, если верно – возвращает 'Здравствуй, малыш!', если нет – идет за двоеточие и проверяет age &lt; 18. Если это верно – возвращает 'Привет!', иначе проверка age &lt; 100 и 'Здравствуйте! И наконец, если ничего из этого не верно, то 'Какой необычный              возраст!'.
                 </p>
                 <p>
                     То же самое через if..else:
@@ -445,11 +445,11 @@ alert( message );
 <pre><code class="javascript"><!--
 -->'use strict';
 var age = prompt('Ваш возраст?', 18);
-if (age < 3) {
+if (age &lt; 3) {
     message = 'Здравствуй, малыш!';
-} else if (age < 18) {
+} else if (age &lt; 18) {
     message = 'Привет!';
-} else if (age < 100) {
+} else if (age &lt; 100) {
     message = 'Здравствуйте!';
 } else {
     message = 'Какой необычный возраст!';
@@ -572,7 +572,7 @@ switch (month) {
 -->'use strict';
 if (SteamPressure * Factor > 56)
    // statement
-else if (Voltageln + VoltageOut < 23000)
+else if (Voltageln + VoltageOut &lt; 23000)
    // statement
 else if (day == Thursday)
    // statement
@@ -845,13 +845,13 @@ else
                 </p>
 <!-- example --><pre><code class="javascript">'use strict';
 <!-- example -->var i;
-<!-- example -->for (i = 0; i <= 5; i++)
+<!-- example -->for (i = 0; i &lt;= 5; i++)
 <!-- example -->    alert(Math.pow(i, 2));
 <!-- example --></code></pre>
                 <p>
                     Каким образом работает эта программа? Оператор for управляет циклом. Он состоит из ключевого слова for, за которым следуют круглые скобки, содержащие три выражения, разделенные точками с запятой:
                 </p>
-<!-- example --><pre><code class="javascript">(i = 0; i <= 5; i++)</code></pre>
+<!-- example --><pre><code class="javascript">(i = 0; i &lt;= 5; i++)</code></pre>
                 <p>
                     Первое из трех выражений называют инициализирующим, второе — условием проверки, а третье — инкрементирующим, как показано на рисунке ниже:
                 </p>
@@ -1099,8 +1099,8 @@ else
                     <u>Пример</u>
                 </p>
 <!-- example --><pre><code class="javascript">'use strict';
-<!-- example -->outer: for (var i = 0; i < 3; i++) {
-<!-- example -->    for (var j = 0; j < 3; j++) {
+<!-- example -->outer: for (var i = 0; i &lt; 3; i++) {
+<!-- example -->    for (var j = 0; j &lt; 3; j++) {
 <!-- example -->        var input = prompt('Значение в координатах ' + i + ', ' + j, '');
 <!-- example -->        // если отмена ввода или пустая строка -
 <!-- example -->        // завершить оба цикла
@@ -1315,7 +1315,7 @@ else
 <!-- example -->    if (x == 7 &amp;&amp; y == 11) {
 <!-- example -->        alert('Вы нашли сокровище');
 <!-- example -->    }
-<!-- example -->    if (x <= 5 ||  x >= 15) {
+<!-- example -->    if (x &lt;= 5 ||  x >= 15) {
 <!-- example -->        alert('Осторожно - драконы!');
 <!-- example -->    }        	        		   
 <!-- example -->}
