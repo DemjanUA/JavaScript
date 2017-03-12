@@ -120,6 +120,14 @@ header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.137255);
   background: white;
   z-index: 999;
+  transition: box-shadow 200ms ease-in-out;
+  -webkit-box-shadow: 1px 1px transparent;
+  box-shadow: 1px 1px transparent;
+}
+
+header[data-locker = "unlock"] {
+    -webkit-box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
 }
 
 header a.logo {
