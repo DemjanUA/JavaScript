@@ -261,6 +261,11 @@ section article .article-images.small-img-7 img {
   max-width: 70%;
 }
 
+section article .article-images.small-img-9 img {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
 section article .article-images.small-img-5 img {
   margin: 0 auto;
   max-width: 50%;

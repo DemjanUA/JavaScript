@@ -107,7 +107,7 @@ section.chapter-item:nth-child(odd) .chapter-wrapper {
 }
 
 section:nth-child(odd).chapter-item .chapter-heading {
-  margin-left: 40px;
+  margin-left: 24px;
   margin-right: -15px;
 }
 
@@ -117,12 +117,12 @@ section.chapter-item .chapter-description {
 
 section:nth-child(even).chapter-item .chapter-description {
   margin-right: 40px;
-  font: normal 17px/28px 'Century';
+  font: normal 18px/28px 'Century';
 }
 
 section:nth-child(odd).chapter-item .chapter-description {
   flex-direction: row-reverse;
-  margin-left: 40px;
+  margin-left: 24px;
 }
 
 img.chapter-icon {
