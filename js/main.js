@@ -2,7 +2,7 @@
 
 var ScrollControler = function(node) {
     this.constructor = function () {
-        console.log('build', this);
+        console.log('build ---------->', this);
         window.addEventListener('scroll', () => {
             if (window.pageYOffset === 0) {
                 this.lock();
@@ -26,4 +26,30 @@ var ScrollControler = function(node) {
         this.unlockFlag = 1;
     };
 }
+
+var LogoScroll = function(node) {
+    this.constructor = function () {
+        console.log('build ---------->', this);
+        this.logoNode.addEventListener('click', this.scrollEvent, false);
+        return this;
+    };
+
+    this.logoNode = node;
+
+    this.scrollEvent = function(event) {
+        var timer = setInterval(function() {
+            var bufferNumber = window.pageYOffset - 100;
+            if (bufferNumber <= 0) {
+                window.scrollTo(0, 0);
+                clearInterval(timer);
+            } else {
+                window.scrollTo(0, bufferNumber - 100);
+            }
+        }, 5);
+
+        event.preventDefault();
+    };
+} 
+
 new ScrollControler(document.querySelector('header')).constructor();
+new LogoScroll(document.querySelector('a.logo')).constructor();
