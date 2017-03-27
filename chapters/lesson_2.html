@@ -2,75 +2,304 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Урок №2 | HTML для JavaScript-разработчика</title>
+    <link rel="shortcut icon" href="../images/logo.ico">
+    <link rel="stylesheet" href="../css/main.css">
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/atom-one-dark.css">
 </head>
 <body>
 <div class="wrapper">
-    <header>https://fonts.google.com/about</header>
+    <header>
+        <a href="" class="logo">
+         <img src="../images/logo.svg" alt="logotype">
+        </a>
+    </header>
     <main>
         <h1 class="title">Вступление</h1>
         <h3 class="content-list">Содержание</h3>
         <ul class="plan">
-            <li><a href="">Почему мы здесь?</a></li>
-            <li><a href="">3 кита</a></li>
-            <li><a href="">Web publishing</a></li>
-            <li><a href="">Комментарии</a></li>
-            <li><a href="">Сonclusion and questions</a></li>
-            <li><a href="">References</a></li>
+            <li><a href="#s1">О программировании</a></li>
+            <li><a href="#s2">Инструменты и их установка</a></li>
+            <li><a href="#s3">Список информационных ресурсов</a></li>
+            <li><a href="#s4">Понятия обфускации и Reverse Engineerin</a></li>
+            <li><a href="#s5">3 кита. HTML, CSS, JavaScript</a></li>
         </ul>
-        <section class="clearfix">
+<!---   SECTION1      -->
+        <section class="clearfix" id="s1">
             <article class="main-article fl">
-                <h3>Почему мы здесь?</h3>
-                    <p>
-                        Our font directory places typography front and center, inviting users to explore, sort, and test fonts for use in more than 135 languages. We showcase individual type designers and foundries, giving you valuable information about the people and their processes, as well as analytics on usage and demographics. Our series of thematic collections helps you discover new fonts that have been vetted and organized by our team of designers, engineers, and collaborators, and our default sort organizes fonts based on popularity, trends, and your geographic location. You can also create your own highly customized collections by filtering families, weights, and scripts, plus test color themes, and review sample copy. Collections can be shared, making it easy to collaborate on projects and ensure typography is optimized and streamlined throughout the design and engineering process.
-                    </p>
-                    <p>
-                        We are working with designers around the world to produce best-in-class typeface designs that are made for the web, and because we are open source, this means that we can release early access trials to our community for testing and feedback.
-                    </p>
+                <h3>1. О программировании</h3>
+                <p>
+                    Кроме объяснения JavaScript я также хочу объяснить основные принципы программирования, веб-разработки, и поделиться знаниями IT-технологий в целом. Как выясняется, программировать тяжело. Обычно базовые принципы просты и понятны. Но программы, построенные на этих принципах, становятся сложными настолько, что вводят свои собственные правила и уровни сложности. Вы строите свой собственный лабиринт, и можете в нём потеряться.
+                </p>
+                <p>
+                    Возможно, временами лекции  и чтение конспектов будут разочаровывать вас. Если вы новичок в программировании, вам нужно будет много чего переварить. Много материала будет скомбинировано таким образом, что вам нужно будет установить новые связи между его частями.
+                </p>
+                <p>
+                    Программа – сложное понятие. Это кусок текста, набранный программистом, это направляющая сила, заставляющая компьютер что-то делать, это данные в памяти компьютера, и при этом она контролирует работу с этой же самой памятью. Аналогии, которые пытаются сравнивать программы со знакомыми нам объектами обычно не справляются с этим. Одна более-менее подходящая – аналогия с машиной. Множество отдельных частей составляют одно целое, и чтобы заставить её работать, нам нужно представлять себе способы, которыми эти части взаимодействуют и что они привносят в работу целой машины.
+                </p>
+                <p>
+                    Компьютер – это машина, которая устроена так, чтобы содержать в себе эти нематериальные машинки. Компьютеры сами по себе могут выполнять только простые действия. Польза их в том, что они могут делать это очень быстро. Программа может очень хитрым образом комбинировать эти действия так, чтобы в результате выполнялись очень сложные действия.
+                </p>
+                <p>
+                    Для некоторых из нас программирование – это увлекательная игра. Программа – это мысленная конструкция. Ничего не стоит её построить, она ничего не весит, и она легко вырастает под нашими пальцами.
+                </p>
+                <p>
+                    Если не быть осторожным, размер и сложность выходят из-под контроля, запутывая даже того, кто её пишет. Это основная проблема программирования: сохранять контроль над программами. Когда программа работает – это прекрасно. <strong>Искусство программирования – это умение контролировать сложность.</strong> Большая программа находится под контролем, и выполнена просто в своей сложности.
+                </p>
+                <p>
+                    Многие программисты верят, что этой сложностью лучше всего управлять, используя в программах небольшой набор хорошо известных техник. Они описали строгие правила («наилучшие практики») того, какую форму программы должны иметь. И самые ревностные среди них считают тех, кто отклоняется от этих практик, плохими программистами.
+                </p>
+                <p>
+                    По мере обучения вам всегда будут встречаться новые задачи и новые неизведанные территории. Программисты, не изучающие новое, стагнируют, забывают свою радость, их работа наскучивает им.
+                </p>
+                <h4>1.1 Почему язык имеет значение</h4>
+                <p>
+                    В начале, при зарождении компьютерных дисциплин, не было языков программирования. Программы выглядели так:
+                </p>
+<!-- example --><pre><code class="javascript">00110001 00000000 00000000
+<!-- example -->00110001 00000001 00000001
+<!-- example -->00110011 00000001 00000010
+<!-- example -->01010001 00001011 00000010
+<!-- example -->00100010 00000010 00001000
+<!-- example -->01000011 00000001 00000000
+<!-- example -->01000001 00000001 00000001
+<!-- example -->00010000 00000010 00000000
+<!-- example -->01100010 00000000 00000000
+<!-- example --></code></pre>
+                <p>
+                    Это программа, складывающая числа от 1 до 10, и выводящая результат (1 + 2 +… + 10 = 55). Она может выполняться на очень простой гипотетической машине. Для программирования первых компьютеров было необходимо устанавливать большие массивы переключателей в нужные позиции, или пробивать дырки в перфокартах и скармливать их компьютеру. Можете представить, какая это была утомительная, подверженная ошибкам процедура. Написание даже простых программ требовало большого ума и дисциплины. Сложные программы были практически немыслимы.
+                </p>
+                <p>
+                    Конечно, ручной ввод этих мистических диаграмм бит (нулей и единиц) давал программисту возможность ощутить себя волшебником. И это чего-то стоило в смысле удовлетворения работой.
+                </p>
+                <p>
+                    Каждая строка указанной программы содержит одну инструкцию. На обычном языке их можно описать так:
+                </p>
+<!-- example --><pre><code class="javascript">1. записать 0 в ячейку памяти 0
+<!-- example -->2. записать 1 в ячейку памяти 1
+<!-- example -->3. записать значение ячейки 1 в ячейку 2
+<!-- example -->4. вычесть 11 из значения ячейки 2
+<!-- example -->5. если у ячейки 2 значение 0, тогда продолжить с пункта 9.
+<!-- example -->6. добавить значение ячейки 1 к ячейке 0
+<!-- example -->7. добавить 1 к ячейке 1
+<!-- example -->8. продолжить с пункта 3.
+<!-- example -->9. вывести значение ячейки 0
+<!-- example --></code></pre>
+                <p>
+                    Этот вариант легче прочесть, чем кучу бит, но он всё равно не очень удобен. Использование имён вместо номеров инструкций и ячеек памяти может улучшить понимание.
+                </p>
+                <p>
+                    Этот вариант легче прочесть, чем кучу бит, но он всё равно не очень удобен. Использование имён вместо номеров инструкций и ячеек памяти может улучшить понимание.
+                </p>
+<!-- example --><pre><code class="javascript">  установить ‘total’ в 0
+<!-- example -->  установить ‘count’ в 1
+<!-- example -->[loop]
+<!-- example -->  установить ‘compare’ в ‘count’
+<!-- example -->  вычесть 11 из ‘compare’
+<!-- example -->  если ‘compare’ равно нулю, перейти на [end]
+<!-- example -->  добавить ‘count’ к ‘total’
+<!-- example -->  добавить 1 к ‘count’
+<!-- example -->  перейти на [loop]
+<!-- example -->[end]
+<!-- example -->  вывести ‘total’
+<!-- example --></code></pre>
+                <p>
+                    Вот теперь уже не так сложно понять, как работает программа. Справитесь? Первые две строки назначают двум областям памяти начальные значения. total будет использоваться для подсчёта результата вычисления, а count будет следить за числом, с которым мы работаем в данный момент. Строчки, использующие ‘compare’, наверно, самые странные. Программе нужно понять, не равно ли count 11, чтобы прекратить подсчёт. Так как наша воображаемая машина довольно примитивна, она может только выполнить проверку на равенство переменной нулю, и принять решение о том, надо ли перепрыгнуть на другую строку. Поэтому она использует область памяти под названием ‘compare’, чтобы подсчитать значение count – 11 и принять решение на основании этого значения. Следующие две строки добавляют значение count в счетчик результата и увеличивают count на 1 каждый раз, когда программа решает, что ещё не достигла значения 11.
+                </p>
+                <p>
+                Вот та же программа на JavaScript:
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->var total = 0, count = 1;
+<!-- example -->while (count <= 10) {
+<!-- example -->  total += count;
+<!-- example -->  count += 1;
+<!-- example -->}
+<!-- example -->console.log(total);
+<!-- example -->// → 55
+<!-- example --></code></pre>
+                <p>
+                    Еще несколько улучшений. Главное – нет необходимости вручную обозначать переходы между строками. Конструкция языка while делает это сама. Она продолжает вычислять блок, заключённый в фигурные скобки, пока условие выполняется (count <=10), то есть значение count меньше или равно 10. Уже не нужно создавать временное значение и сравнивать его с нулём. Это было скучно, и сила языков программирования в том, что они помогают избавиться от скучных деталей.
+                </p>
+                <p>
+                    В конце программы по завершению while к результату применяется операция console.log с целью вывода.
+                </p>
+                <p>
+                    И наконец, вот так могла бы выглядеть программа, если б у нас были удобные операции range и sum, которые, соответственно, создавали бы набор номеров в заданном промежутке и подсчитывали сумму набора:
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->console.log(sum(range(1, 10)));
+<!-- example -->// → 55
+<!-- example --></code></pre>
+                <p>
+                    Мораль сей басни – одна и та же программа может быть написана и долго, и коротко, читаемо и нечитаемо. Первая версия программы была совершенно смутной, а последняя – почти настоящий язык – записать сумму диапазона номеров от 1 до 10. В следующих главах мы рассмотрим, как делать такие вещи.
+                </p>
+                <p>
+                    Хороший язык программирования помогает программисту сообщать компьютеру о необходимых операциях на высоком уровне. Позволяет опускать скучные детали, даёт удобные строительные блоки (while и console.log), позволяет создавать свои собственные блоки (sum и range), и делает простым комбинирование блоков.
+                </p>
+                <h4>1.2 Код, и что с ним делать</h4>
+                <p>
+                    Код – это текст, из которого состоят программы. В большинстве глав книги есть код. Чтение и написание кода – это неотъемлемая часть обучения программированию. Старайтесь не просто пробегать глазами примеры – читайте их внимательно и разбирайтесь. Сначала это будет происходить медленно и непонятно, но вы быстро овладеете навыками. То же – насчёт упражнений. Не подразумевайте, что вы в них разобрались, пока не напишете работающий вариант.
+                </p>
             </article>
             <article class="side-article fr">
-                <h3>Lorem ipsum dolor sit</h3>
-                    <p>
-                        We are working with designers around the world to produce best-in-class typeface designs that are made for the web, and because we are open source, this means that we can release early access trials to our community for testing and feedback.
-                    </p>
+                <h3></h3>
+                <p class="color">
+                    <em>
+                        Я не просвещаю тех, кто не жаждет учиться, и не побуждаю тех, кто не хочет искать ответы самостоятельно. Если я покажу один угол квадрата, и они не приходят ко мне с остальными тремя – мне не нужно давать повторных объяснений.
+                        <br>
+                        <br>
+                        Конфуций
+                    </em>
+                </p>
             </article>
         </section>
-        <section class="clearfix">
+<!---   SECTION2      -->
+        <section class="clearfix" id="s2">
             <article class="main-article fl">
-                <h3>3 кита</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptate accusamus beatae libero nostrum nihil doloremque nobis doloribus atque. Velit harum quis dolorum quisquam illo perferendis impedit dicta, ab similique molestias, veniam voluptate nostrum dolores quibusdam suscipit nesciunt deserunt ipsa.
-                    </p>
-                    <div class="article-images">
-                        <img src="images/3 whale.png" alt="">
-                    </div>
-                    <p>
-                        Printers used to print a bunch of pages and bind them into a book. Nowadays, we create a bunch of HTML files and link them together into a website. Learning HTML and CSS is a matter of understanding the available HTML markup and CSS rules to make a browser render those files exactly how they’re supposed to.
-                    </p>
+                <h3>2. Инструменты и их установка</h3>
+                <h4>2.1 Internet</h4>
+                <p>Всю необходимую информацию можно найти в интернете, вплоть до решения вашей задачи.</p>
+                <h4>2.2 Браузер</h4>
+                <p>
+                    Для тестирования и отладки наших скриптов мы будем использовать браузер. Веб-разработчику желательно иметь возможность протестировать приложение в как можно большем количестве браузеров. Необходимом минимум: Chrome, Firefox, Safari, Opera.
+                </p>
+                <h4>2.3 Хостинг</h4>
+                <p>
+                    Хо́стинг — услуга по предоставлению ресурсов для размещения информации на сервере, постоянно находящемся в сети.
+                </p>
+                <h4>2.4 IDE</h4>
+                <p>
+                    IDE - Integrated Development Environment (Интегрированная среда разработки).
+                </p>
+                <p>
+                    Термин IDE означает редактор, который расширен большим количеством «наворотов», умеет работать со вспомогательными системами, такими как багтрекер, контроль версий, и много чего ещё.
+                </p>
+                <p>
+                    Как правило, IDE загружает весь проект целиком, поэтому может предоставлять автодополнение по функциям всего проекта, удобную навигацию по его файлам и т.п.
+                </p>
+                <p>
+                    Присмотритесь к следующим вариантам:<br>
+                    - WebStorm/PHPStorm<br>
+                    - <a href="https://atom.io/">Atom</a><br>
+                    - <a href="https://code.visualstudio.com/">VSC</a> <br>
+                    - <a href="http://brackets.io/">Brackets</a> <br>
+                    - <a href="https://www.sublimetext.com/">Sublime Text</a> <br>
+                    - <a href="https://notepad-plus-plus.org/">Notepad++</a><br>
+                </p>
+                <p>
+                    В списках выше перечислены редакторы, которые использую я или мои знакомые – хорошие разработчики. Конечно, существуют и другие отличные редакторы, если вам что-то нравится – пользуйтесь.
+                </p>
+                <p>
+                    Выбор редактора, как и любого инструмента, во многом индивидуален и зависит от ваших проектов, привычек, личных предпочтений.
+                </p>
+                <p><a href="https://code.visualstudio.com/docs/getstarted/keybindings">VSC hotkeys</a></p>
+                <h4>2.5 Консоль</h4>
+                <h4>2.6 VCS</h4>
+                <p>
+                    Система контроля версий (VCS) — это система, регистрирующая изменения в одном или нескольких файлах с тем, чтобы в дальнейшем была возможность вернуться к определённым старым версиям этих файлов.
+                </p>
+                <p>
+                    VCS даёт возможность возвращать отдельные файлы к прежнему виду, возвращать к прежнему состоянию весь проект, просматривать происходящие со временем изменения, определять, кто последним вносил изменения во внезапно переставший работать модуль, кто и когда внёс в код какую-то ошибку, и многое другое.
+                </p>
+                <p>
+                    Мы будем использовать <a href="https://git-scm.com/">GIT</a>, для контроля наших проектов.
+                </p>
+                <p>Веб-сервисы для облачного хранения проектов: <br>
+                    - <a href="https://github.com/">GitHub</a><br>
+                    - <a href="https://about.gitlab.com/">GitLab</a><br>
+                    - <a href="https://bitbucket.org/">Bitbucket</a><br>
+                </p>
+                <p>
+                    UI-клиенты для работы с git:<br>
+                    - <a href="https://www.gitkraken.com/">GitKraken</a><br>
+                    - <a href="https://www.sourcetreeapp.com/">SourceTree</a><br>
+                </p>
+                <h4>2.7 NPM</h4>
+                <p>
+                    npm(Node.js Package Manager) — менеджер пакетов, входящий в состав Node.js.
+                </p>
+                <p>
+                    <a href="https://habrahabr.ru/post/243335/">NPM на хабре.</a>
+                </p>
+                <p><a href="https://nodejs.org/uk/">Install</a></p>
+                <h4>2.8 Web-server</h4>
+                <p>Мы будем использовать пакет <a href="https://www.apachefriends.org/ru/index.html">XAMPP</a></p>
+                <h4>2.9 CodePen и JSFiddle</h4>
+                <p>
+                    <a href="http://codepen.io/">CodePen</a> и <a href="https://jsfiddle.net/">JSFiddle</a>
+                </p>
+                <h4>2.10 Can I use</h4>
+                <p><a href="http://caniuse.com/">Can I use</a></p>
+                <h4>2.11 ES6 supporting</h4>
+                <p><a href="https://kangax.github.io/compat-table/es6/">ES6 supporting</a></p>
             </article>
         </section>
-        <section class="clearfix">
+<!---   SECTION3      -->
+        <section class="clearfix" id="s3">
             <article class="main-article fl">
-                <h3>Web publishing</h3>
-                    <p>
-                        So, what is it to “learn” HTML and CSS? We like to look at it through a historical lens into the printing industry. Back in the days of the original printing press, printers created documents by arranging metal characters, dipping them in ink, and pressing them onto a piece of paper.
-                    </p>
-                    <p>
-                        In a lot of ways, that’s exactly what web developers do, except instead of arranging moveable type, they write HTML and CSS. We’re concerned with the same task as they were: conveying content in meaningful ways. We even deal with the same presentational issues they did, like selecting the font to use, setting the size of headings, and determining the space between lines of text.
-                    </p>
-                    <div class="article-images">
-                        <img src="images/web publishing.png" alt="">
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum veniam nulla cumque officia impedit quos. Quaerat quasi facilis unde illum labore, itaque molestias necessitatibus, odit?
-                    </p>
+                <h3>3. Список информационных ресурсов</h3>
+                <p>
+                    <a href="http://www.ecma-international.org/ecma-262/7.0/index.html">- ECMAScript-262</a><br>
+                    <a href="https://learn.javascript.ru/">- Learn JavaScript</a><br>
+                    <a href="https://developer.mozilla.org/en-US/">- MDN</a><br>
+                    <a href="https://www.w3schools.com/">- W3C</a><br>
+                    <a href="http://circle.com.ua/lections/fe10/">- Frontend guide</a><br>
+                    <a href="https://webref.ru/">- WebReference</a><br>
+                </p>
+            </article>
+        </section>
+<!---   SECTION4      -->
+        <section class="clearfix" id="s4">
+            <article class="main-article fl">
+                <h3>4. Понятия обфускации и Reverse Engineerin</h3>
+
+            </article>
+        </section>
+<!---   SECTION5      -->
+        <section class="clearfix" id="s4">
+            <article class="main-article fl">
+                <h3>5. 3 кита. HTML, CSS, JavaScript</h3>
+                <div class="article-images small-img-7">
+                    <img src="images/3 whale.png" alt="">
+                </div>
+                <p>В разработке фронтенда все начинается с HTML</p>
+                <p>
+                    HTML это язык разметки. С его помощью браузер знает как отобразить веб-страницу. HTML отделяет "контент" (слова, изображения, аудио, видео и т.д.) от "представления" (определения типа контента и правила как должен отображаться контент такого типа). HTML использует предопределённый набор 'элементов. Элементы могут либо иметь вложенную структуру и содержать другие элементы, либо содержать контент. Элементы определяются "тегами" которые всегда окружены угловыми скобками. Большинство тегов идёт парами - открывающий и закрывающий теги,  и закрывающий всегда имеет слэш-символ перед именем тега.
+                </p>
+                <p>
+                    Каскадные таблицы стилей (Cascading Style Sheets = CSS) — это язык, который отвечает за визуальное представление документов пользователю.
+                </p>
+                <p>
+                    JavaScript изначально создавался для того, чтобы сделать web-странички «живыми». Программы на этом языке называются скриптами. В браузере они подключаются напрямую к HTML и, как только загружается страничка – тут же выполняются.
+                </p>
             </article>
         </section>
     </main>
     <footer></footer>
 </div>
+<script src="../js/highlight.pack.js"></script>
+<script src="../js/highlightjs-line-numbers.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+<script src="../js/main.js"></script>
 </body>
 </html>
+
+<!--
+    <div class="article-images">
+        <img src="images/web publishing.png" alt="">
+    </div>
+
+    <div class="article-images small-img-7">
+        <img src="images/if else example images.jpg" alt="">
+    </div>
+
+    <div class="article-images small-img-7">
+        <img src="images/if else example images.jpg" alt="">
+    </div>
+-->
