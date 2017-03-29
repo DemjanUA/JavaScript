@@ -14,267 +14,652 @@
 <div class="wrapper">
     <header>
         <a href="" class="logo">
-         <img src="../images/logo.svg" alt="logotype">
+            <img src="../images/logo.svg" alt="logotype">
         </a>
     </header>
     <main>
         <h1 class="title">Вступление</h1>
         <h3 class="content-list">Содержание</h3>
         <ul class="plan">
-            <li><a href="#s1">О программировании</a></li>
-            <li><a href="#s2">Инструменты и их установка</a></li>
-            <li><a href="#s3">Список информационных ресурсов</a></li>
-            <li><a href="#s4">Понятия обфускации и Reverse Engineerin</a></li>
-            <li><a href="#s5">3 кита. HTML, CSS, JavaScript</a></li>
+            <li><a href="#s1">Вступление</a></li>
+            <li><a href="#s2">Директива &#60;!DOCTYPE html&#62;</a></li>
+            <li><a href="#s3">Понятие тега</a></li>
+            <li><a href="#s4">Структура HTML документа</a></li>
+            <li><a href="#s5">Cинтаксис HTML комментариев</a></li>
+            <li><a href="#s6">Заголовок страницы</a></li>
+            <li><a href="#s7">Paragraphs</a></li>
+            <li><a href="#s8">Headings</a></li>
+            <li><a href="#s9">Cписки</a></li>
+            <li><a href="#s10">Emphasis (italic) elements</a></li>
+            <li><a href="#s11">Strong (bold) elements</a></li>
+            <li><a href="#s12">Пустые элементы HTML</a></li>
+            <li><a href="#s13">Links и images</a></li>
+            <li><a href="#s14">Forms</a></li>
+            <li><a href="#s15">Semantic html</a></li>
+            <li><a href="#s16">Emmet</a></li>
+            <li><a href="#s17">HTML и JavaScript</a></li>
+            <li><a href="#s18">Совместимость и браузерные войны</a></li>
+            <li><a href="#s19">Упражнения</a></li>
         </ul>
 <!---   SECTION1      -->
         <section class="clearfix" id="s1">
             <article class="main-article fl">
-                <h3>1. О программировании</h3>
+                <h3>1. Вступление</h3>
                 <p>
-                    Кроме объяснения JavaScript я также хочу объяснить основные принципы программирования, веб-разработки, и поделиться знаниями IT-технологий в целом. Как выясняется, программировать тяжело. Обычно базовые принципы просты и понятны. Но программы, построенные на этих принципах, становятся сложными настолько, что вводят свои собственные правила и уровни сложности. Вы строите свой собственный лабиринт, и можете в нём потеряться.
+                    HTML определяет содержимое каждой веб-страницы в Интернете. «Пометив» свое исходное содержимое тегами HTML, вы говорите веб-браузерам, как вы хотите отображать различные части вашего контента. Создание HTML-документа с правильно размеченным контентом - это первый шаг к созданию веб-страницы.
                 </p>
                 <p>
-                    Возможно, временами лекции  и чтение конспектов будут разочаровывать вас. Если вы новичок в программировании, вам нужно будет много чего переварить. Много материала будет скомбинировано таким образом, что вам нужно будет установить новые связи между его частями.
+                    Hpertext Markup Language является языком, описывающим структуру и семантику содержимого веб-документа.
                 </p>
-                <p>
-                    Программа – сложное понятие. Это кусок текста, набранный программистом, это направляющая сила, заставляющая компьютер что-то делать, это данные в памяти компьютера, и при этом она контролирует работу с этой же самой памятью. Аналогии, которые пытаются сравнивать программы со знакомыми нам объектами обычно не справляются с этим. Одна более-менее подходящая – аналогия с машиной. Множество отдельных частей составляют одно целое, и чтобы заставить её работать, нам нужно представлять себе способы, которыми эти части взаимодействуют и что они привносят в работу целой машины.
-                </p>
-                <p>
-                    Компьютер – это машина, которая устроена так, чтобы содержать в себе эти нематериальные машинки. Компьютеры сами по себе могут выполнять только простые действия. Польза их в том, что они могут делать это очень быстро. Программа может очень хитрым образом комбинировать эти действия так, чтобы в результате выполнялись очень сложные действия.
-                </p>
-                <p>
-                    Для некоторых из нас программирование – это увлекательная игра. Программа – это мысленная конструкция. Ничего не стоит её построить, она ничего не весит, и она легко вырастает под нашими пальцами.
-                </p>
-                <p>
-                    Если не быть осторожным, размер и сложность выходят из-под контроля, запутывая даже того, кто её пишет. Это основная проблема программирования: сохранять контроль над программами. Когда программа работает – это прекрасно. <strong>Искусство программирования – это умение контролировать сложность.</strong> Большая программа находится под контролем, и выполнена просто в своей сложности.
-                </p>
-                <p>
-                    Многие программисты верят, что этой сложностью лучше всего управлять, используя в программах небольшой набор хорошо известных техник. Они описали строгие правила («наилучшие практики») того, какую форму программы должны иметь. И самые ревностные среди них считают тех, кто отклоняется от этих практик, плохими программистами.
-                </p>
-                <p>
-                    По мере обучения вам всегда будут встречаться новые задачи и новые неизведанные территории. Программисты, не изучающие новое, стагнируют, забывают свою радость, их работа наскучивает им.
-                </p>
-                <h4>1.1 Почему язык имеет значение</h4>
-                <p>
-                    В начале, при зарождении компьютерных дисциплин, не было языков программирования. Программы выглядели так:
-                </p>
-<!-- example --><pre><code class="javascript">00110001 00000000 00000000
-<!-- example -->00110001 00000001 00000001
-<!-- example -->00110011 00000001 00000010
-<!-- example -->01010001 00001011 00000010
-<!-- example -->00100010 00000010 00001000
-<!-- example -->01000011 00000001 00000000
-<!-- example -->01000001 00000001 00000001
-<!-- example -->00010000 00000010 00000000
-<!-- example -->01100010 00000000 00000000
-<!-- example --></code></pre>
-                <p>
-                    Это программа, складывающая числа от 1 до 10, и выводящая результат (1 + 2 +… + 10 = 55). Она может выполняться на очень простой гипотетической машине. Для программирования первых компьютеров было необходимо устанавливать большие массивы переключателей в нужные позиции, или пробивать дырки в перфокартах и скармливать их компьютеру. Можете представить, какая это была утомительная, подверженная ошибкам процедура. Написание даже простых программ требовало большого ума и дисциплины. Сложные программы были практически немыслимы.
-                </p>
-                <p>
-                    Конечно, ручной ввод этих мистических диаграмм бит (нулей и единиц) давал программисту возможность ощутить себя волшебником. И это чего-то стоило в смысле удовлетворения работой.
-                </p>
-                <p>
-                    Каждая строка указанной программы содержит одну инструкцию. На обычном языке их можно описать так:
-                </p>
-<!-- example --><pre><code class="javascript">1. записать 0 в ячейку памяти 0
-<!-- example -->2. записать 1 в ячейку памяти 1
-<!-- example -->3. записать значение ячейки 1 в ячейку 2
-<!-- example -->4. вычесть 11 из значения ячейки 2
-<!-- example -->5. если у ячейки 2 значение 0, тогда продолжить с пункта 9.
-<!-- example -->6. добавить значение ячейки 1 к ячейке 0
-<!-- example -->7. добавить 1 к ячейке 1
-<!-- example -->8. продолжить с пункта 3.
-<!-- example -->9. вывести значение ячейки 0
-<!-- example --></code></pre>
-                <p>
-                    Этот вариант легче прочесть, чем кучу бит, но он всё равно не очень удобен. Использование имён вместо номеров инструкций и ячеек памяти может улучшить понимание.
-                </p>
-                <p>
-                    Этот вариант легче прочесть, чем кучу бит, но он всё равно не очень удобен. Использование имён вместо номеров инструкций и ячеек памяти может улучшить понимание.
-                </p>
-<!-- example --><pre><code class="javascript">  установить ‘total’ в 0
-<!-- example -->  установить ‘count’ в 1
-<!-- example -->[loop]
-<!-- example -->  установить ‘compare’ в ‘count’
-<!-- example -->  вычесть 11 из ‘compare’
-<!-- example -->  если ‘compare’ равно нулю, перейти на [end]
-<!-- example -->  добавить ‘count’ к ‘total’
-<!-- example -->  добавить 1 к ‘count’
-<!-- example -->  перейти на [loop]
-<!-- example -->[end]
-<!-- example -->  вывести ‘total’
-<!-- example --></code></pre>
-                <p>
-                    Вот теперь уже не так сложно понять, как работает программа. Справитесь? Первые две строки назначают двум областям памяти начальные значения. total будет использоваться для подсчёта результата вычисления, а count будет следить за числом, с которым мы работаем в данный момент. Строчки, использующие ‘compare’, наверно, самые странные. Программе нужно понять, не равно ли count 11, чтобы прекратить подсчёт. Так как наша воображаемая машина довольно примитивна, она может только выполнить проверку на равенство переменной нулю, и принять решение о том, надо ли перепрыгнуть на другую строку. Поэтому она использует область памяти под названием ‘compare’, чтобы подсчитать значение count – 11 и принять решение на основании этого значения. Следующие две строки добавляют значение count в счетчик результата и увеличивают count на 1 каждый раз, когда программа решает, что ещё не достигла значения 11.
-                </p>
-                <p>
-                Вот та же программа на JavaScript:
-<!-- example --><pre><code class="javascript">'use strict';
-<!-- example -->var total = 0, count = 1;
-<!-- example -->while (count <= 10) {
-<!-- example -->  total += count;
-<!-- example -->  count += 1;
-<!-- example -->}
-<!-- example -->console.log(total);
-<!-- example -->// → 55
-<!-- example --></code></pre>
-                <p>
-                    Еще несколько улучшений. Главное – нет необходимости вручную обозначать переходы между строками. Конструкция языка while делает это сама. Она продолжает вычислять блок, заключённый в фигурные скобки, пока условие выполняется (count <=10), то есть значение count меньше или равно 10. Уже не нужно создавать временное значение и сравнивать его с нулём. Это было скучно, и сила языков программирования в том, что они помогают избавиться от скучных деталей.
-                </p>
-                <p>
-                    В конце программы по завершению while к результату применяется операция console.log с целью вывода.
-                </p>
-                <p>
-                    И наконец, вот так могла бы выглядеть программа, если б у нас были удобные операции range и sum, которые, соответственно, создавали бы набор номеров в заданном промежутке и подсчитывали сумму набора:
-                </p>
-<!-- example --><pre><code class="javascript">'use strict';
-<!-- example -->console.log(sum(range(1, 10)));
-<!-- example -->// → 55
-<!-- example --></code></pre>
-                <p>
-                    Мораль сей басни – одна и та же программа может быть написана и долго, и коротко, читаемо и нечитаемо. Первая версия программы была совершенно смутной, а последняя – почти настоящий язык – записать сумму диапазона номеров от 1 до 10. В следующих главах мы рассмотрим, как делать такие вещи.
-                </p>
-                <p>
-                    Хороший язык программирования помогает программисту сообщать компьютеру о необходимых операциях на высоком уровне. Позволяет опускать скучные детали, даёт удобные строительные блоки (while и console.log), позволяет создавать свои собственные блоки (sum и range), и делает простым комбинирование блоков.
-                </p>
-                <h4>1.2 Код, и что с ним делать</h4>
-                <p>
-                    Код – это текст, из которого состоят программы. В большинстве глав книги есть код. Чтение и написание кода – это неотъемлемая часть обучения программированию. Старайтесь не просто пробегать глазами примеры – читайте их внимательно и разбирайтесь. Сначала это будет происходить медленно и непонятно, но вы быстро овладеете навыками. То же – насчёт упражнений. Не подразумевайте, что вы в них разобрались, пока не напишете работающий вариант.
-                </p>
-            </article>
-            <article class="side-article fr">
-                <h3></h3>
-                <p class="color">
-                    <em>
-                        Я не просвещаю тех, кто не жаждет учиться, и не побуждаю тех, кто не хочет искать ответы самостоятельно. Если я покажу один угол квадрата, и они не приходят ко мне с остальными тремя – мне не нужно давать повторных объяснений.
-                        <br>
-                        <br>
-                        Конфуций
-                    </em>
-                </p>
+                <div class="article-images small-img-7">
+                    <img src="images/lesson_2_text_to_html.png" alt="">
+                </div>  
             </article>
         </section>
 <!---   SECTION2      -->
         <section class="clearfix" id="s2">
             <article class="main-article fl">
-                <h3>2. Инструменты и их установка</h3>
-                <h4>2.1 Internet</h4>
-                <p>Всю необходимую информацию можно найти в интернете, вплоть до решения вашей задачи.</p>
-                <h4>2.2 Браузер</h4>
+                <h3>2. Директива &#60;!DOCTYPE html&#62;</h3>
                 <p>
-                    Для тестирования и отладки наших скриптов мы будем использовать браузер. Веб-разработчику желательно иметь возможность протестировать приложение в как можно большем количестве браузеров. Необходимом минимум: Chrome, Firefox, Safari, Opera.
-                </p>
-                <h4>2.3 Хостинг</h4>
-                <p>
-                    Хо́стинг — услуга по предоставлению ресурсов для размещения информации на сервере, постоянно находящемся в сети.
-                </p>
-                <h4>2.4 IDE</h4>
-                <p>
-                    IDE - Integrated Development Environment (Интегрированная среда разработки).
+                    Большинство современных html-документов начинается с строки &#60;!DOCTYPE html&#62;, это говорит браузеру, что документ надо интерпретировать в соответствии с современными стандартом HTML (HTML5.*).
                 </p>
                 <p>
-                    Термин IDE означает редактор, который расширен большим количеством «наворотов», умеет работать со вспомогательными системами, такими как багтрекер, контроль версий, и много чего ещё.
-                </p>
-                <p>
-                    Как правило, IDE загружает весь проект целиком, поэтому может предоставлять автодополнение по функциям всего проекта, удобную навигацию по его файлам и т.п.
-                </p>
-                <p>
-                    Присмотритесь к следующим вариантам:<br>
-                    - WebStorm/PHPStorm<br>
-                    - <a href="https://atom.io/">Atom</a><br>
-                    - <a href="https://code.visualstudio.com/">VSC</a> <br>
-                    - <a href="http://brackets.io/">Brackets</a> <br>
-                    - <a href="https://www.sublimetext.com/">Sublime Text</a> <br>
-                    - <a href="https://notepad-plus-plus.org/">Notepad++</a><br>
-                </p>
-                <p>
-                    В списках выше перечислены редакторы, которые использую я или мои знакомые – хорошие разработчики. Конечно, существуют и другие отличные редакторы, если вам что-то нравится – пользуйтесь.
-                </p>
-                <p>
-                    Выбор редактора, как и любого инструмента, во многом индивидуален и зависит от ваших проектов, привычек, личных предпочтений.
-                </p>
-                <p><a href="https://code.visualstudio.com/docs/getstarted/keybindings">VSC hotkeys</a></p>
-                <h4>2.5 Консоль</h4>
-                <h4>2.6 VCS</h4>
-                <p>
-                    Система контроля версий (VCS) — это система, регистрирующая изменения в одном или нескольких файлах с тем, чтобы в дальнейшем была возможность вернуться к определённым старым версиям этих файлов.
-                </p>
-                <p>
-                    VCS даёт возможность возвращать отдельные файлы к прежнему виду, возвращать к прежнему состоянию весь проект, просматривать происходящие со временем изменения, определять, кто последним вносил изменения во внезапно переставший работать модуль, кто и когда внёс в код какую-то ошибку, и многое другое.
-                </p>
-                <p>
-                    Мы будем использовать <a href="https://git-scm.com/">GIT</a>, для контроля наших проектов.
-                </p>
-                <p>Веб-сервисы для облачного хранения проектов: <br>
-                    - <a href="https://github.com/">GitHub</a><br>
-                    - <a href="https://about.gitlab.com/">GitLab</a><br>
-                    - <a href="https://bitbucket.org/">Bitbucket</a><br>
-                </p>
-                <p>
-                    UI-клиенты для работы с git:<br>
-                    - <a href="https://www.gitkraken.com/">GitKraken</a><br>
-                    - <a href="https://www.sourcetreeapp.com/">SourceTree</a><br>
-                </p>
-                <h4>2.7 NPM</h4>
-                <p>
-                    npm(Node.js Package Manager) — менеджер пакетов, входящий в состав Node.js.
-                </p>
-                <p>
-                    <a href="https://habrahabr.ru/post/243335/">NPM на хабре.</a>
-                </p>
-                <p><a href="https://nodejs.org/uk/">Install</a></p>
-                <h4>2.8 Web-server</h4>
-                <p>Мы будем использовать пакет <a href="https://www.apachefriends.org/ru/index.html">XAMPP</a></p>
-                <h4>2.9 CodePen и JSFiddle</h4>
-                <p>
-                    <a href="http://codepen.io/">CodePen</a> и <a href="https://jsfiddle.net/">JSFiddle</a>
-                </p>
-                <h4>2.10 Can I use</h4>
-                <p><a href="http://caniuse.com/">Can I use</a></p>
-                <h4>2.11 ES6 supporting</h4>
-                <p><a href="https://kangax.github.io/compat-table/es6/">ES6 supporting</a></p>
+                   Это просто специальная строка <strong>в начале html-документа</strong> и она всегда должна выглядеть точно так же:
+              </p>
+<!-- example --><pre><code class="html">&#60;!DOCTYPE html&#62;</code></pre>
             </article>
         </section>
 <!---   SECTION3      -->
         <section class="clearfix" id="s3">
             <article class="main-article fl">
-                <h3>3. Список информационных ресурсов</h3>
+                <h3>3. Понятие тега</h3>
                 <p>
-                    <a href="http://www.ecma-international.org/ecma-262/7.0/index.html">- ECMAScript-262</a><br>
-                    <a href="https://learn.javascript.ru/">- Learn JavaScript</a><br>
-                    <a href="https://developer.mozilla.org/en-US/">- MDN</a><br>
-                    <a href="https://www.w3schools.com/">- W3C</a><br>
-                    <a href="http://circle.com.ua/lections/fe10/">- Frontend guide</a><br>
-                    <a href="https://webref.ru/">- WebReference</a><br>
+                    HTML теги - это имена элементов, заключенные в угловые скобки.
+                </p>
+                <p>
+                    Весь текст, заключённый между начальным и конечным тегом, включая и сами эти теги, называется элементом. Сам же текст между тегами — содержанием элемента. Содержание элемента может включать в себя любой текст, в том числе и другие элементы.
+                </p>
+<!-- example --><pre><code class="html">&#60;!DOCTYPE html&#62;
+<!-- example -->&#60;html lang="en"&#62;
+<!-- example -->&#60;head&#62;
+<!-- example -->    &#60;meta charset="UTF-8"&#62;
+<!-- example -->    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+<!-- example -->    &#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+<!-- example -->    &#60;title&#62;Document&#60;/title&#62;
+<!-- example -->&#60;/head&#62;
+<!-- example -->&#60;body&#62;
+<!-- example -->    &#60;h1&#62;Hello world!&#60;/h1&#62;
+<!-- example -->&#60;/body&#62;
+<!-- example -->&#60;/html&#62;
+<!-- example --></code></pre>
+                <p>
+                    У тегов может быть несколько форм. Элемент вроде тела, параграфа и ссылки начинается открывающим тегом &#60;p&#62; и заканчивается закрывающим &#60;/p&#62;. Некоторые открывающие теги, типа ссылки &#60;a&#62;, содержат дополнительную информацию в виде имя=”значение”. Она называется «атрибутами».
+                </p>
+                <p>
+                    Некоторые теги ничего не окружают, и их не надо закрывать. Пример – тег картинки
+                </p>
+<!-- example --><pre><code class="html">&#60;img src="http://example.com/image.jpg"&#62;</code></pre>
+                <p>
+                    HTML разбирается парсером довольно либерально по отношению к возможным ошибкам. Если какие-то теги пропущены, браузер их воссоздаёт. Как именно это происходит, записано в стандартах, поэтому можно ожидать, что все современные браузеры будут делать это одинаково.
                 </p>
             </article>
         </section>
 <!---   SECTION4      -->
         <section class="clearfix" id="s4">
             <article class="main-article fl">
-                <h3>4. Понятия обфускации и Reverse Engineerin</h3>
-
+                <h3>4. Структура HTML документа</h3>
+                <p>
+                    Как уже говорилось ранее любая html5 страница начинается со строки &#60;!DOCTYPE html&#62;.
+                </p>
+                <p>
+                    Затем вся наша веб-страница должна быть обернута в тег &#60;html&#62;. Все, что находится внутри тега, считается частью &#60;html&#62; элемента, который представляет собой саму веб-страницу.
+                </p>
+                <div class="article-images small-img-7">
+                    <img src="images/lesson_2_html_element.png" alt="">
+                </div>
+                <p>
+                    Внутри элемента  &#60;html&#62; у нас есть еще два элемента, называемые  &#60;head&#62; и  &#60;body&#62;. &#60;head&#62; веб-страницы содержит все ее метаданные, такие как заголовок страницы, любые таблицы стилей CSS и другие вещи, необходимые для отображения страницы. Основная же часть HTML-разметки будет находиться в элементе &#60;body&#62;, который представляет видимое содержимое страницы.
+                </p>
+                <div class="article-images small-img-7">
+                    <img src="images/lesson_2(head_and_body).png" alt="">
+                </div>
             </article>
         </section>
 <!---   SECTION5      -->
-        <section class="clearfix" id="s4">
+        <section class="clearfix" id="s5">
             <article class="main-article fl">
-                <h3>5. 3 кита. HTML, CSS, JavaScript</h3>
+                <h3>5. Cинтаксис HTML комментариев</h3>
+                <p>
+                    Также обратите внимание на синтаксис комментариев HTML в приведенном ниже фрагменте. Все, что начинается с &#60;!-- и заканчивается --&#62;, будет полностью игнорироваться браузером. Это полезно для документирования вашего кода и создания заметок самому себе.
+                </p>
+<!-- example --><pre><code class="html">&#60;!DOCTYPE html&#62;
+<!-- example -->&#60;html lang="en"&#62;
+<!-- example -->&#60;head&#62;
+<!-- example -->    &#60;meta charset="UTF-8"&#62;
+<!-- example -->    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+<!-- example -->    &#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+<!-- example -->    &#60;title&#62;Document&#60;/title&#62;
+<!-- example -->&#60;/head&#62;
+<!-- example -->&#60;body&#62;
+<!-- example -->    &#60;!-- &#60;h1&#62;Hello world!&#60;/h1&#62; --&#62;
+<!-- example -->&#60;/body&#62;
+<!-- example -->&#60;/html&#62;
+<!-- example --></code></pre>
+            </article>
+        </section>
+<!---   SECTION6      -->
+        <section class="clearfix" id="s6">
+            <article class="main-article fl">
+                <h3>6. Заголовок страницы</h3>
+                <p>Одним из наиболее важных фрагментов метаданных является название вашей веб-страницы, определяемое тегом &#60;title&#62;. Браузеры отображают &#60;title&#62; на вкладке для вашей страницы, и Google отображает ее как результат поиска.</p>
+            </article>
+        </section>
+<!---   SECTION7      -->
+        <section class="clearfix" id="s7">
+            <article class="main-article fl">
+                <h3>7. Paragraphs</h3>
+                <p>Элемент &#60;p&#62; помечает весь текст внутри него как отдельный абзац.</p>
+<!-- example --><pre><code class="html">&#60;p&#62;
+<!-- example -->    First, we need to learn some basic HTML.
+<!-- example -->&#60;/p&#62;
+<!-- example --></code></pre>
                 <div class="article-images small-img-7">
-                    <img src="images/3 whale.png" alt="">
+                    <img src="images/lesson_2(p).png" alt="">
                 </div>
-                <p>В разработке фронтенда все начинается с HTML</p>
+            </article>
+        </section>
+<!---   SECTION8      -->
+        <section class="clearfix" id="s8">
+            <article class="main-article fl">
+                <h3>8. Headings</h3>
+                <p>Headings(заголовки) похожи на (title)заголовок, но на самом деле они отображаются на странице. HTML предоставляет шесть уровней заголовков, и соответствующие элементы: &#60;h1&#62;, &#60;h2&#62;, &#60;h3&#62;, ..., &#60;h6&#62;. Чем выше номер, тем менее заметен заголовок.</p>
                 <p>
-                    HTML это язык разметки. С его помощью браузер знает как отобразить веб-страницу. HTML отделяет "контент" (слова, изображения, аудио, видео и т.д.) от "представления" (определения типа контента и правила как должен отображаться контент такого типа). HTML использует предопределённый набор 'элементов. Элементы могут либо иметь вложенную структуру и содержать другие элементы, либо содержать контент. Элементы определяются "тегами" которые всегда окружены угловыми скобками. Большинство тегов идёт парами - открывающий и закрывающий теги,  и закрывающий всегда имеет слэш-символ перед именем тега.
+                    Первый заголовок страницы обычно должен быть &#60;h1&#62;.
+                </p>
+<!-- example --><pre><code class="html">&#60;!DOCTYPE html&#62;
+<!-- example -->&#60;html lang="en"&#62;
+<!-- example -->&#60;head&#62;
+<!-- example -->    &#60;meta charset="UTF-8"&#62;
+<!-- example -->    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+<!-- example -->    &#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+<!-- example -->    &#60;title&#62;Document&#60;/title&#62;
+<!-- example -->&#60;/head&#62;
+<!-- example -->&#60;body&#62;
+<!-- example -->    &#60;h1&#62;Interneting Is Easy!&#60;/h1&#62;
+<!-- example -->    &#60;p&#62;First, we need to learn some basic HTML.&#60;/p&#62;
+<!-- example -->
+<!-- example -->    &#60;h2&#62;Headings&#60;/h2&#62;
+<!-- example -->    &#60;p&#62;
+<!-- example -->        Headings define the outline of your site. There are six levels of headings.
+<!-- example -->    &#60;/p&#62;
+<!-- example -->&#60;/body&#62;
+<!-- example -->&#60;/html&#62;
+<!-- example --></code></pre>
+                <div class="article-images small-img-8">
+                    <img src="images/lesson_2(headings).png" alt="">
+                </div>
+                <p>
+                    Заголовки - это основной способ разметки различных разделов вашего контента. Они определяют схему вашей веб-страницы, которую видят как люди, так и поисковые системы.
+                </p>
+            </article>
+        </section>
+<!---   SECTION9      -->
+        <section class="clearfix" id="s9">
+            <article class="main-article fl">
+                <h3>9. Cписки</h3>
+                <p>
+                    Списки предоставляют возможность упорядочить и систематизировать разные данные и представить их в наглядном и удобном для пользователя виде.
                 </p>
                 <p>
-                    Каскадные таблицы стилей (Cascading Style Sheets = CSS) — это язык, который отвечает за визуальное представление документов пользователю.
+                    В HTML5 существует 3 типа списков: unordered lists (маркированный список) - &#60;ul&#62;, ordered lists (нумерованный список) - &#60;ol&#62; и список определений(тройка элементов предназначена для создания определений) - &#60;dd&#62;, &#60;dt&#62;, &#60;dl&#62;.
+                </p>
+                <h4>9.1 Unordered lists</h4>
+                <p>
+                    Оборачивание содержимого тегами &#60;ul&#62; сообщает браузеру, что все, что находится внутри, должно отображаться как неупорядоченный список. Чтобы обозначить отдельные элементы(пункты) в этом списке, Вам нужно обернуть их в теги &#60;li&#62; (list item) следующим образом:
+                </p>
+<!-- example --><pre><code class="html">&#60;!DOCTYPE html&#62;
+<!-- example -->&#60;html lang="en"&#62;
+<!-- example -->&#60;head&#62;
+<!-- example -->    &#60;meta charset="UTF-8"&#62;
+<!-- example -->    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+<!-- example -->    &#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+<!-- example -->    &#60;title&#62;Document&#60;/title&#62;
+<!-- example -->&#60;/head&#62;
+<!-- example -->&#60;body&#62;
+<!-- example -->    &#60;h2&#62;Lists&#60;/h2&#62;
+<!-- example -->
+<!-- example -->    &#60;p&#62;This is how you make an unordered list:&#60;/p&#62;
+<!-- example -->
+<!-- example -->    &#60;ul&#62;
+<!-- example -->        &#60;li&#62;Add a "ul" element (it stands for unordered list)&#60;/li&#62;
+<!-- example -->        &#60;li&#62;Add each item in its own "li" element&#60;/li&#62;
+<!-- example -->        &#60;li&#62;They don't need to be in any particular order&#60;/li&#62;
+<!-- example -->    &#60;/ul&#62;
+<!-- example -->&#60;/body&#62;
+<!-- example -->&#60;/html&#62;
+<!-- example --></code></pre>
+                <div class="article-images small-img-8">
+                    <img src="images/lesson_2(unordered lists).png" alt="">
+                </div>
+                <h4>9.2 Ordered lists</h4>
+                <p>
+                    Если последовательность элементов списка имеет значение, вам следует использовать упорядоченный список. Чтобы создать упорядоченный список, просто измените родительский элемент &#60;ul&#62; на &#60;ol&#62;.
+                </p>
+<!-- example --><pre><code class="html">&#60;!DOCTYPE html&#62;
+<!-- example -->&#60;html lang="en"&#62;
+<!-- example -->&#60;head&#62;
+<!-- example -->    &#60;meta charset="UTF-8"&#62;
+<!-- example -->    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+<!-- example -->    &#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+<!-- example -->    &#60;title&#62;Document&#60;/title&#62;
+<!-- example -->&#60;/head&#62;
+<!-- example -->&#60;body&#62;
+<!-- example -->    &#60;h2&#62;Lists&#60;/h2&#62;
+<!-- example -->
+<!-- example -->    &#60;p&#62;This is how you make an unordered list:&#60;/p&#62;
+<!-- example -->
+<!-- example -->    &#60;ul&#62;
+<!-- example -->        &#60;li&#62;Add a "ul" element (it stands for unordered list)&#60;/li&#62;
+<!-- example -->        &#60;li&#62;Add each item in its own "li" element&#60;/li&#62;
+<!-- example -->        &#60;li&#62;They don't need to be in any particular order&#60;/li&#62;
+<!-- example -->    &#60;/ul&#62;
+    &#60;p&#62;This is what an ordered list looks like:&#60;/p&#62;
+
+    &#60;ol&#62;
+        &#60;li&#62;Notice the new "ol" element wrapping everything&#60;/li&#62;
+        &#60;li&#62;But, the list item elements are the same&#60;/li&#62;
+        &#60;li&#62;Also note how the numbers increment on their own&#60;/li&#62;
+        &#60;li&#62;You should be noticing things is this precise order, because this is an ordered list&#60;/li&#62;
+    &#60;/ol&#62;
+<!-- example -->&#60;/body&#62;
+<!-- example -->&#60;/html&#62;
+<!-- example --></code></pre>
+                <div class="article-images small-img-8">
+                    <img src="images/lesson_2(ordered lists).png" alt="">
+                </div>
+                <p>
+                    Различие между неупорядоченным списком и упорядоченным списком может показаться глупым, но оно действительно имеет значение для веб-браузеров, поисковых систем и восприятие контента людьми. Это, также, проще, чем нумерация каждого элемента списка вручную.
+                </p>
+                <h4>9.3 Definition list</h4>
+            </article>
+        </section>
+<!---   SECTION10      -->
+        <section class="clearfix" id="s10">
+            <article class="main-article fl">
+                <h3>10. Emphasis (italic) elements</h3>
+                <p>
+                    Часть, упакованная в теги &#60;em&#62;, должна отображаться как курсив, как показано ниже. Обратите внимание, что затронута только часть строки.
+                </p>
+<!-- example --><pre><code class="html">&#60;!DOCTYPE html&#62;
+<!-- example -->&#60;html lang="en"&#62;
+<!-- example -->&#60;head&#62;
+<!-- example -->    &#60;meta charset="UTF-8"&#62;
+<!-- example -->    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+<!-- example -->    &#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+<!-- example -->    &#60;title&#62;Document&#60;/title&#62;
+<!-- example -->&#60;/head&#62;
+<!-- example -->&#60;body&#62;
+<!-- example -->    &#60;h2&#62;Inline Elements&#60;/h2&#62;
+<!-- example -->
+<!-- example -->    &#60;p&#62;
+<!-- example -->        &#60;em&#62;Sometimes&#60;/em&#62;, you need to draw attention to a particular word or phrase.
+<!-- example -->    &#60;/p&#62;
+<!-- example -->&#60;/body&#62;
+<!-- example -->&#60;/html&#62;
+<!-- example --></code></pre>
+                <div class="article-images small-img-8">
+                    <img src="images/lesson_2(emphasis).png" alt="">
+                </div>
+            </article>
+        </section>
+<!---   SECTION11      -->
+        <section class="clearfix" id="s11">
+            <article class="main-article fl">
+                <h3>11. Strong (bold) elements</h3>
+                <p>
+                    Если вы хотите зделать контент более выразительным, чем в теге &#60;em&#62;, вы можете использовать &#60;strong&#62;.
+                </p>
+<!-- example --><pre><code class="html">&#60;!DOCTYPE html&#62;
+<!-- example -->&#60;html lang="en"&#62;
+<!-- example -->&#60;head&#62;
+<!-- example -->    &#60;meta charset="UTF-8"&#62;
+<!-- example -->    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+<!-- example -->    &#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+<!-- example -->    &#60;title&#62;Document&#60;/title&#62;
+<!-- example -->&#60;/head&#62;
+<!-- example -->&#60;body&#62;
+<!-- example -->    &#60;h2&#62;Inline Elements&#60;/h2&#62;
+<!-- example -->
+<!-- example -->    &#60;p&#62;
+<!-- example -->        &#60;em&#62;Sometimes&#60;/em&#62;, you need to draw attention to a particular word or phrase.
+<!-- example -->    &#60;/p&#62;
+<!-- example -->
+<!-- example -->    &#60;p&#62;
+<!-- example -->        Other times you need to &#60;strong&#62;strong&#60;/strong&#62;ly emphasize the importance of a word or phrase.
+<!-- example -->    &#60;/p&#62;
+<!-- example -->&#60;/body&#62;
+<!-- example -->&#60;/html&#62;
+<!-- example --></code></pre>
+<!---   SECTION*      -->
+                <div class="article-images small-img-8">
+                    <img src="images/lesson_2(strong).png" alt="">
+                </div>
+            </article>
+        </section>
+<!---   SECTION12      -->
+        <section class="clearfix" id="s12">
+            <article class="main-article fl">
+                <h3>12. Пустые элементы HTML</h3>
+                <p>
+                    Теги HTML, с которым мы столкнулись до сих пор,имели текстовое содержимое (например, &#60;p&#62;) или другие элементы HTML (например, &#60;ol&#62;) внутри. Это не относится ко всем HTML-элементам. Некоторые из них могут быть пустыми или самозакрывающимися. Наиболее распространенными пустыми элементами являются разрывы строк &#60;br&#62; и горизонтальные линии &#60;hr&#62;.
+                </p>
+                <h4>12.1 Разрывы строк &#60;br&#62;</h4>
+<!-- example --><pre><code class="html">&#60;!DOCTYPE html&#62;
+<!-- example -->&#60;html lang="en"&#62;
+<!-- example -->&#60;head&#62;
+<!-- example -->    &#60;meta charset="UTF-8"&#62;
+<!-- example -->    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+<!-- example -->    &#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+<!-- example -->    &#60;title&#62;Document&#60;/title&#62;
+<!-- example -->&#60;/head&#62;
+<!-- example -->&#60;body&#62;
+<!-- example -->    &#60;h2&#62;Empty Elements&#60;/h2&#62;
+<!-- example -->
+<!-- example -->    &#60;p&#62;
+<!-- example -->        Thanks for reading! Interneting should be getting easier now.
+<!-- example -->    &#60;/p&#62;
+<!-- example -->
+<!-- example -->    &#60;p&#62;Regards,&#60;br&#62;
+<!-- example -->        The Authors
+<!-- example -->    &#60;/p&#62;
+<!-- example -->&#60;/body&#62;
+<!-- example -->&#60;/html&#62;
+<!-- example --></code></pre>
+                <div class="article-images small-img-7">
+                    <img src="images/lesson_2(br).png" alt="">
+                </div>
+                <h4>12.2 Горизонтальные линии &#60;hr&#62;</h4>
+<!-- example --><pre><code class="html">&#60;!DOCTYPE html&#62;
+<!-- example -->&#60;html lang="en"&#62;
+<!-- example -->&#60;head&#62;
+<!-- example -->    &#60;meta charset="UTF-8"&#62;
+<!-- example -->    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+<!-- example -->    &#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+<!-- example -->    &#60;title&#62;Document&#60;/title&#62;
+<!-- example -->&#60;/head&#62;
+<!-- example -->&#60;body&#62;
+<!-- example -->    &#60;h2&#62;Empty Elements&#60;/h2&#62;
+<!-- example -->
+<!-- example -->    &#60;p&#62;
+<!-- example -->        Thanks for reading! Interneting should be getting easier now.
+<!-- example -->    &#60;/p&#62;
+<!-- example -->
+<!-- example -->    &#60;p&#62;Regards,&#60;br&#62;
+<!-- example -->        The Authors
+<!-- example -->    &#60;/p&#62;
+<!-- example -->    &#60;hr/&#62;
+<!-- example -->
+<!-- example -->    &#60;p&#62;
+<!-- example -->        P.S. This page might look like crap, but we'll fix that with some CSS soon.
+<!-- example -->    &#60;/p&#62;
+<!-- example -->&#60;/body&#62;
+<!-- example -->&#60;/html&#62;
+<!-- example --></code></pre>
+                <div class="article-images small-img-7">
+                    <img src="images/lesson_2(hr).png" alt="">
+                </div>
+            </article>
+        </section>
+<!---   SECTION13      -->
+        <section class="clearfix" id="s13">
+            <article class="main-article fl">
+                <h3>13. Links и images</h3>
+                <div class="article-images small-img-8">
+                    <img src="images/lesson_2(links_img).png" alt="">
+                </div>
+<!-- example --><pre><code class="html">&#60;img src="" alt=""&#62;</code></pre>
+<!-- example --><pre><code class="html">&#60;a href="URL"&#62;Text&#60;/a&#62;</code></pre>
+<!-- example --><pre><code class="html">&#60;a href="URL"&#62;&#60;img src="" alt=""&#62;&#60;/a&#62;</code></pre>
+            </article>
+        </section>
+<!---   SECTION14      -->
+        <section class="clearfix" id="s14">
+            <article class="main-article fl">
+                <h3>14. Forms</h3>
+                <p>
+                    Форма  — гипертекстовый контейнер контейнер, позволяющий установить обратную связь между посетителем веб-страницы и веб-приложением. Получение данных от пользователя осуществляется через типовые элементы управления : текстовые поля, кнопки, чекбоксы и т.п., размещаемых в теге form.
+                </p>
+                <div class="article-images small-img-8">
+                    <img src="images/lesson_2(form).png" alt="">
+                </div>
+                <p>
+                    Также форма - способ взаимодействия(интерфейс) пользователя с бизнес логикой и данными на сервере посредством HTTP запросов.
+                </p>
+                <div class="article-images small-img-7">
+                    <img src="images/lesson_2(form_back_end).png" alt="">
+                </div>
+<!-- example --><pre><code class="html">&#60;!DOCTYPE html&#62;
+<!-- example -->&#60;html lang="en"&#62;
+<!-- example -->&#60;head&#62;
+<!-- example -->    &#60;meta charset="UTF-8"&#62;
+<!-- example -->    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+<!-- example -->    &#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+<!-- example -->    &#60;title&#62;Document&#60;/title&#62;
+<!-- example -->&#60;/head&#62;
+<!-- example -->&#60;body&#62;
+<!-- example -->    &#60;form action="" method=""&#62;
+<!-- example -->        &#60;label for='full-name'>Name&#60;/label&#62;
+<!-- example -->        &#60;input id='full-name' name='full-name' type='text'/&#62;
+<!-- example -->    &#60;/form&#62;
+<!-- example -->&#60;/body&#62;
+<!-- example -->&#60;/html&#62;
+<!-- example --></code></pre>
+                <h4>14.1 Radio buttons</h4>
+<!-- example --><pre><code class="html">&#60;!DOCTYPE html&#62;
+<!-- example -->&#60;html lang="en"&#62;
+<!-- example -->&#60;head&#62;
+<!-- example -->    &#60;meta charset="UTF-8"&#62;
+<!-- example -->    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+<!-- example -->    &#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+<!-- example -->    &#60;title&#62;Document&#60;/title&#62;
+<!-- example -->&#60;/head&#62;
+<!-- example -->&#60;body&#62;
+<!-- example -->    &#60;fieldset class='legacy-form-row'&#62;
+<!-- example -->        &#60;legend>Type of Talk&#60;/legend&#62;
+<!-- example -->        &#60;input id='talk-type-1'
+<!-- example -->                name='talk-type'
+<!-- example -->                type='radio'
+<!-- example -->                value='main-stage' /&#62;
+<!-- example -->        &#60;label for='talk-type-1' class='radio-label'>Main Stage<&#60;/label&#62;
+<!-- example -->        &#60;input id='talk-type-2'
+<!-- example -->                name='talk-type'
+<!-- example -->                type='radio'
+<!-- example -->                value='workshop'
+<!-- example -->                checked /&#62;
+<!-- example -->        &#60;label for='talk-type-2' class='radio-label'>Workshop&#60;/label&#62;
+<!-- example -->    &#60;/fieldset&#62;
+<!-- example -->&#60;/body&#62;
+<!-- example -->&#60;/html&#62;
+<!-- example --></code></pre>
+                <div class="article-images small-img-7">
+                    <img src="images/lesson_2(form_radio).png" alt="">
+                </div>
+                <h4>14.2 Select elements</h4>
+<!-- example --><pre><code class="html">&#60;!DOCTYPE html&#62;
+<!-- example -->&#60;html lang="en"&#62;
+<!-- example -->&#60;head&#62;
+<!-- example -->    &#60;meta charset="UTF-8"&#62;
+<!-- example -->    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+<!-- example -->    &#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+<!-- example -->    &#60;title&#62;Document&#60;/title&#62;
+<!-- example -->&#60;/head&#62;
+<!-- example -->&#60;body&#62;
+<!-- example -->    &#60;label for='t-shirt'>T-Shirt Size&#60;/label&#62;
+<!-- example -->    &#60;select id='t-shirt' name='t-shirt'&#62;
+<!-- example -->        &#60;option value='xs'>Extra Small&#60;/option&#62;
+<!-- example -->        &#60;option value='s'>Small&#60;/option&#62;
+<!-- example -->        &#60;option value='m'>Medium&#60;/option&#62;
+<!-- example -->        &#60;option value='l'>Large&#60;/option&#62;
+<!-- example -->    &#60;/select&#62;
+<!-- example -->&#60;/body&#62;
+<!-- example -->&#60;/html&#62;
+<!-- example --></code></pre>
+                <h4>14.3 Textareas</h4>
+<!-- example --><pre><code class="html">&#60;!DOCTYPE html&#62;
+<!-- example -->&#60;html lang="en"&#62;
+<!-- example -->&#60;head&#62;
+<!-- example -->    &#60;meta charset="UTF-8"&#62;
+<!-- example -->    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+<!-- example -->    &#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+<!-- example -->    &#60;title&#62;Document&#60;/title&#62;
+<!-- example -->&#60;/head&#62;
+<!-- example -->&#60;body&#62;
+<!-- example -->    &#60;textarea&#62;
+<!-- example -->&#60;/body&#62;
+<!-- example -->&#60;/html&#62;
+<!-- example --></code></pre>
+            <h4>14.4 checkboxes</h4>
+<!-- example --><pre><code class="html">&#60;!DOCTYPE html&#62;
+<!-- example -->&#60;html lang="en"&#62;
+<!-- example -->&#60;head&#62;
+<!-- example -->    &#60;meta charset="UTF-8"&#62;
+<!-- example -->    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+<!-- example -->    &#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+<!-- example -->    &#60;title&#62;Document&#60;/title&#62;
+<!-- example -->&#60;/head&#62;
+<!-- example -->&#60;body&#62;
+<!-- example -->    &#60;label class='checkbox-label' for='available'&#62;
+<!-- example -->        &#60;input id='available'
+<!-- example -->                name='available'
+<!-- example -->                type='checkbox'
+<!-- example -->                value='is-available'/&#62;
+<!-- example -->        &#60;span&#62;I’m actually available the date of the talk&#60;/span&#62;
+<!-- example -->    &#60;/label&#62;
+<!-- example -->&#60;/body&#62;
+<!-- example -->&#60;/html&#62;
+<!-- example --></code></pre>
+            <h4>14.5 submit buttons</h4>
+<!-- example --><pre><code class="html">&#60;button&#62;Submit&#60;/button&#62;</code></pre>
+                <div class="article-images small-img-7">
+                    <img src="images/lesson_2(submit).png" alt="">
+                </div>
+            </article>
+        </section>
+<!---   SECTION15      -->
+        <section class="clearfix" id="s15">
+            <article class="main-article fl">
+                <h3>15. Semantic html</h3>
+<!-- example --><pre><code class="html">&#60;header&#62;</code></pre>
+<!-- example --><pre><code class="html">&#60;footer&#62;</code></pre>
+<!-- example --><pre><code class="html">&#60;aside&#62;</code></pre>
+<!-- example --><pre><code class="html">&#60;nav&#62;</code></pre>
+<!-- example --><pre><code class="html">&#60;menu&#62;</code></pre>
+<!-- example --><pre><code class="html">&#60;figure&#62;</code></pre>
+<!-- example --><pre><code class="html">&#60;figcaption&#62;</code></pre>
+<!-- example --><pre><code class="html">&#60;article&#62;</code></pre>
+<!-- example --><pre><code class="html">&#60;section&#62;</code></pre>
+<!-- example --><pre><code class="html">&#60;main&#62;</code></pre>
+            </article>
+        </section>
+<!---   SECTION16      -->
+        <section class="clearfix" id="s16">
+            <article class="main-article fl">
+                <h3>16. Emmet</h3>
+                <p>
+                    <a href="https://docs.emmet.io/">Emmet documentation</a>
+                </p>
+            </article>
+        </section>
+<!---   SECTION17      -->
+        <section class="clearfix" id="s17">
+            <article class="main-article fl">
+                <h3>17. HTML и JavaScript</h3>
+                <p>
+                    В контексте нашего курса самый главный тег HTML — &#60;script&#62;. Он позволяет включать в документ программу на JavaScript.
+                </p>
+<!-- example --><pre><code class="html">&#60;!DOCTYPE html&#62;
+<!-- example -->&#60;html lang="en"&#62;
+<!-- example -->&#60;head&#62;
+<!-- example -->    &#60;meta charset="UTF-8"&#62;
+<!-- example -->    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+<!-- example -->    &#60;meta http-equiv="X-UA-Compatible" content="ie=edge"&#62;
+<!-- example -->    &#60;title&#62;Document&#60;/title&#62;
+<!-- example -->&#60;/head&#62;
+<!-- example -->&#60;body&#62;
+<!-- example -->    &#60;h1>Внимание, тест.&#60;/h1&#62;
+<!-- example -->    &#60;script>alert("Привет!");&#60;/script&#62;;
+<!-- example -->&#60;/body&#62;
+<!-- example -->&#60;/html&#62;
+<!-- example --></code></pre>
+                <p>
+                    Такой скрипт запустится сразу, как только браузер встретит тег &#60;script&#62; при разборе HTML. На странице появится диалог-предупреждение.
                 </p>
                 <p>
-                    JavaScript изначально создавался для того, чтобы сделать web-странички «живыми». Программы на этом языке называются скриптами. В браузере они подключаются напрямую к HTML и, как только загружается страничка – тут же выполняются.
+                    Включать большие программы в HTML непрактично. У тега &#60;script&#62; есть атрибут src, чтобы запрашивать файл со скриптом (текст, содержащий программу на JavaScript) с адреса URL.
                 </p>
+            </article>
+        </section>
+<!---   SECTION18      -->
+        <section class="clearfix" id="s18">
+            <article class="main-article fl">
+                <h3>18. Совместимость и браузерные войны</h3>
+                <p>
+                    На ранних стадиях развития Веба браузер по имени Mosaic занимал большую часть рынка. Через несколько лет баланс сместился в сторону Netscape, который затем был сильно потеснён браузером Internet Explorer от Microsoft. В любой момент превосходства одного из браузеров его разработчики позволяли себе в одностороннем порядке изобретать новые свойства веба. Так как большинство людей использовали один и тот же браузер, сайты просто начинали использовать эти свойства, не обращая внимания на остальные браузеры.
+                </p>
+                <p>
+                    Это были тёмные века совместимости, которые иногда называли «войнами браузеров». Веб-разработчики сталкивались с двумя или тремя несовместимыми платформами. Кроме того, браузеры около 2003 года были полны ошибок, причём у каждого они были свои. Жизнь людей, создававших веб-страницы, была тяжёлой.
+                </p>
+                <p>
+                    Mozilla Firefox, некоммерческое ответвление Netscape, бросил вызов гегемонии Internet Explorer в конце 2000-х. Так как Microsoft особо не стремилась к конкуренции, Firefox отобрал солидную часть рынка. Примерно в это время Google представил свой браузер Chrome, а Apple – Safari. Это привело к появлению четырёх основных игроков вместо одного.
+                </p>
+                <p>
+                    У новых игроков были более серьёзные намерения по отношению к стандартам и больше инженерного опыта, что привело к лучшей совместимости и меньшему количеству багов. Microsoft, видя сжатие своей части рынка, приняла эти стандарты. Если вы начинаете изучать веб-разработку сегодня – вам повезло. Последние версии основных браузеров работают одинаково и в них мало ошибок.
+                </p>
+                <p>
+                    Нельзя сказать, что ситуация уже идеальная. Некоторые люди в вебе по причинам инерционности или корпоративных правил используют очень старые браузеры. Пока они не отомрут совсем, написание веб-страниц для них потребует мистических знаний об их недостатках и причудах. Эта книга не про причуды – она представляет современный, разумный стиль веб-программирования.
+                </p>
+            </article>
+        </section>
+<!---   SECTION19      -->
+        <section class="clearfix" id="s19">
+            <article class="main-article fl">
+                <h3>19. Упражнения</h3>
+                <h4>1. Markup</h4>
+                <p>
+                    Разметить такую страницу:
+                </p>
+                <div class="article-images small-img-8">
+                    <img src="images/lesson_2(ex_1).png" alt="">
+                </div>
+                <h4>2. Markup form-set</h4>
+                <p>
+                    Разметить такую страницу:
+                </p>
+                <div class="article-images small-img-8">
+                    <img src="images/lesson_2(ex_2_forms).png" alt="">
+                </div>
+                <h4>3. Markup semantic</h4>
+                <p>
+                    Разметить такую страницу:
+                </p>
+                <div class="article-images small-img-5">
+                    <img src="images/lesson_2(ex_3_semantic).png" alt="">
+                </div>
+                <p>
+                    с такой подструктурой
+                </p>
+                <div class="article-images small-img-5">
+                    <img src="images/lesson_2(ex_3_semantic_1).png" alt="">
+                </div>
+                <div class="article-images small-img-5">
+                    <img src="images/lesson_2(ex_3_semantic_2).png" alt="">
+                </div>
+                <div class="article-images small-img-5">
+                    <img src="images/lesson_2(ex_3_semantic_3).png" alt="">
+                </div>
+                <div class="article-images small-img-5">
+                    <img src="images/lesson_2(ex_3_semantic_4).png" alt="">
+                </div>
             </article>
         </section>
     </main>
