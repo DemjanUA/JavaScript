@@ -22,10 +22,11 @@
         <h3 class="content-list">Содержание</h3>
         <ul class="plan">
             <li><a href="#s1">О программировании</a></li>
-            <li><a href="#s2">Инструменты и их установка</a></li>
-            <li><a href="#s3">Список информационных ресурсов</a></li>
-            <li><a href="#s4">Понятия обфускации и Reverse Engineerin</a></li>
-            <li><a href="#s5">3 кита. HTML, CSS, JavaScript</a></li>
+            <li><a href="#s2">WEB</a></li>
+            <li><a href="#s3">Инструменты и их установка</a></li>
+            <li><a href="#s4">Список информационных ресурсов</a></li>
+            <li><a href="#s5">Понятия обфускации и Reverse Engineerin</a></li>
+            <li><a href="#s6">3 кита. HTML, CSS, JavaScript</a></li>
         </ul>
 <!---   SECTION1      -->
         <section class="clearfix" id="s1">
@@ -159,18 +160,47 @@
 <!---   SECTION2      -->
         <section class="clearfix" id="s2">
             <article class="main-article fl">
-                <h3>2. Инструменты и их установка</h3>
-                <h4>2.1 Internet</h4>
+                <h3>2. WEB</h3>
+                <p>
+                    World Wide Web, всемирная паутина (это не то же самое, что весь интернет в целом) – набор протоколов и форматов, позволяющий нам посещать странички через браузер. Web (рус. «паутина») в названии обозначает, что страницы можно легко связать друг с другом, в результате чего образуется гигантская сеть-паутина, по которой движутся пользователи.
+                </p>
+                <p>
+                    Чтобы добавить в Веб содержимое, вам нужно соединить машину с интернетом и заставить её слушать 80 порт, используя протокол передачи гипертекста, Hypertext Transfer Protocol (HTTP). Он позволяет другим компьютерам запрашивать документы по сети.
+                </p>
+                <p>
+                    Каждый документ имеет имя в виде универсального локатора ресурсов, Universal Resource Locator (URL), который выглядит примерно так:
+                </p>
+<!-- example --><pre><code class="html"><!--
+-->   http:// javascript.net/12_browser.html
+|          |              |               |
+  протокол      сервер           путь<!--
+    example --></pre></code class="html">
+                <p>
+                    Первая часть говорит нам, что URL использует протокол HTTP (в отличие от, скажем, зашифрованного HTTP, который записывается как https://). Затем идёт часть, определяющая, с какого сервера мы запрашиваем документ. Последняя – строка пути, определяющая конкретный документ или ресурс.
+                </p>
+                <p>
+                    У каждой машины, присоединённой к интернету, есть свой адрес IP, который выглядит как 37.187.37.82. Его иногда можно использовать вместо имени сервера в URL. Но цифры сложнее запоминать и печатать, чем имена – поэтому обычно вы регистрируете доменное имя, которое указывает на конкретную машину (или набор машин). Я зарегистрировал javascript.net, указывающий на IP-адрес машины, которую я контролирую, поэтому можно использовать этот адрес для предоставления веб-страниц.
+                </p>
+                <p>
+                    Если вы введёте указанный URL в адресную строку браузера, он попробует запросить и показать документ, находящийся по этому URL. Во-первых, браузеру надо выяснить, куда ссылается домен javascript.net. Затем, используя протокол HTTP, он соединяется с сервером по этому адресу, и спрашивает его ресурс по имени /12_browser.html
+                </p>
+            </article>
+        </section>
+<!---   SECTION3      -->
+        <section class="clearfix" id="s3">
+            <article class="main-article fl">
+                <h3>3. Инструменты и их установка</h3>
+                <h4>3.1 Internet</h4>
                 <p>Всю необходимую информацию можно найти в интернете, вплоть до решения вашей задачи.</p>
-                <h4>2.2 Браузер</h4>
+                <h4>3.2 Браузер</h4>
                 <p>
                     Для тестирования и отладки наших скриптов мы будем использовать браузер. Веб-разработчику желательно иметь возможность протестировать приложение в как можно большем количестве браузеров. Необходимом минимум: Chrome, Firefox, Safari, Opera.
                 </p>
-                <h4>2.3 Хостинг</h4>
+                <h4>3.3 Хостинг</h4>
                 <p>
                     Хо́стинг — услуга по предоставлению ресурсов для размещения информации на сервере, постоянно находящемся в сети.
                 </p>
-                <h4>2.4 IDE</h4>
+                <h4>3.4 IDE</h4>
                 <p>
                     IDE - Integrated Development Environment (Интегрированная среда разработки).
                 </p>
@@ -196,8 +226,8 @@
                     Выбор редактора, как и любого инструмента, во многом индивидуален и зависит от ваших проектов, привычек, личных предпочтений.
                 </p>
                 <p><a href="https://code.visualstudio.com/docs/getstarted/keybindings">VSC hotkeys</a></p>
-                <h4>2.5 Консоль</h4>
-                <h4>2.6 VCS</h4>
+                <h4>3.5 Консоль</h4>
+                <h4>3.6 VCS</h4>
                 <p>
                     Система контроля версий (VCS) — это система, регистрирующая изменения в одном или нескольких файлах с тем, чтобы в дальнейшем была возможность вернуться к определённым старым версиям этих файлов.
                 </p>
@@ -217,7 +247,7 @@
                     - <a href="https://www.gitkraken.com/">GitKraken</a><br>
                     - <a href="https://www.sourcetreeapp.com/">SourceTree</a><br>
                 </p>
-                <h4>2.7 NPM</h4>
+                <h4>3.7 NPM</h4>
                 <p>
                     npm(Node.js Package Manager) — менеджер пакетов, входящий в состав Node.js.
                 </p>
@@ -225,43 +255,45 @@
                     <a href="https://habrahabr.ru/post/243335/">NPM на хабре.</a>
                 </p>
                 <p><a href="https://nodejs.org/uk/">Install</a></p>
-                <h4>2.8 Web-server</h4>
+                <h4>3.8 Web-server</h4>
                 <p>Мы будем использовать пакет <a href="https://www.apachefriends.org/ru/index.html">XAMPP</a></p>
-                <h4>2.9 CodePen и JSFiddle</h4>
+                <h4>3.9 CodePen и JSFiddle</h4>
                 <p>
                     <a href="http://codepen.io/">CodePen</a> и <a href="https://jsfiddle.net/">JSFiddle</a>
                 </p>
-                <h4>2.10 Can I use</h4>
+                <h4>3.10 Can I use</h4>
                 <p><a href="http://caniuse.com/">Can I use</a></p>
-                <h4>2.11 ES6 supporting</h4>
+                <h4>3.11 ES6 supporting</h4>
                 <p><a href="https://kangax.github.io/compat-table/es6/">ES6 supporting</a></p>
-            </article>
-        </section>
-<!---   SECTION3      -->
-        <section class="clearfix" id="s3">
-            <article class="main-article fl">
-                <h3>3. Список информационных ресурсов</h3>
-                <p>
-                    <a href="http://www.ecma-international.org/ecma-262/7.0/index.html">- ECMAScript-262</a><br>
-                    <a href="https://learn.javascript.ru/">- Learn JavaScript</a><br>
-                    <a href="https://developer.mozilla.org/en-US/">- MDN</a><br>
-                    <a href="https://www.w3schools.com/">- W3C</a><br>
-                    <a href="http://circle.com.ua/lections/fe10/">- Frontend guide</a><br>
-                    <a href="https://webref.ru/">- WebReference</a><br>
-                </p>
             </article>
         </section>
 <!---   SECTION4      -->
         <section class="clearfix" id="s4">
             <article class="main-article fl">
-                <h3>4. Понятия обфускации и Reverse Engineerin</h3>
-
+                <h3>4. Список информационных ресурсов</h3>
+                <p>
+                    <a href="https://learn.javascript.ru/">- Learn JavaScript</a><br>
+                    <a href="https://developer.mozilla.org/en-US/">- MDN</a><br>
+                    <a href="https://www.w3schools.com/">- W3C</a><br>
+                    <a href="http://circle.com.ua/lections/fe10/">- Frontend guide</a><br>
+                    <a href="https://webref.ru/">- WebReference</a><br>
+                    <a href="http://www.ecma-international.org/ecma-262/7.0/index.html">- ECMAScript-262(JavaScript)</a><br>
+                    <a href="https://www.w3.org/DOM/DOMTR">DOM - Document Object Model</a>
+                    <a href="https://www.w3.org/TR/html5/">BOM - Document Object Model</a>
+                </p>
             </article>
         </section>
 <!---   SECTION5      -->
         <section class="clearfix" id="s5">
             <article class="main-article fl">
-                <h3>5. 3 кита. HTML, CSS, JavaScript</h3>
+                <h3>5. Понятия обфускации и Reverse Engineerin</h3>
+
+            </article>
+        </section>
+<!---   SECTION6      -->
+        <section class="clearfix" id="s6">
+            <article class="main-article fl">
+                <h3>6. 3 кита. HTML, CSS, JavaScript</h3>
                 <div class="article-images small-img-7">
                     <img src="images/3 whale.png" alt="">
                 </div>
@@ -275,6 +307,7 @@
                 <p>
                     JavaScript изначально создавался для того, чтобы сделать web-странички «живыми». Программы на этом языке называются скриптами. В браузере они подключаются напрямую к HTML и, как только загружается страничка – тут же выполняются.
                 </p>
+                  
             </article>
         </section>
     </main>
