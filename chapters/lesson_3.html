@@ -27,6 +27,8 @@
             <li><a href="#s4">Окружение</a></li>
             <li><a href="#s5">Лексическая структура</a></li>
             <li><a href="#s6">Strict Mode</a></li>
+            <li><a href="#s7">Взаимодействие с пользователем</a></li>
+            <li><a href="#s8">Инструкции и их разновидности</a></li>
             <li><a href="#s*">Упражнения</a></li>
         </ul>
 <!---   SECTION1      -->
@@ -34,7 +36,7 @@
             <article class="main-article fl">
                 <h3>1. Вступление</h3>
                 <p>
-                    JavaScript, вероятно, является одним из самых важных языков программирования на сегодняшний день. Благодаря развитию веба JavaScript достиг высот, которых ему не сулили. Этот раздел представляет собой обзор языка JavaScript иго история, синтаксиса и клиентского окружения.</p>
+                    JavaScript, вероятно, является одним из самых важных языков программирования на сегодняшний день. Благодаря развитию веба JavaScript достиг высот, которых ему не сулили. Этот раздел представляет собой обзор языка JavaScript его история, синтаксиса и клиентского окружения.</p>
                 <div class="article-images small-img-8">
                     <img src="images/lesson_3_intr.png" alt="">
                 </div>
@@ -135,7 +137,6 @@
         <section class="clearfix" id="s3">
             <article class="main-article fl">
                 <h3>3. Классификация</h3>
-                <p>
                     <h4>1. Cценарный</h4>
                     <h4>2. Высокоуровневый язык</h4>
                     <h4>3. Динамическая типизация</h4>
@@ -171,7 +172,6 @@
                         - Полиморфизм<br/>
                         - Реактивное
                     </p>
-                </p>
             </article>
         </section>
 <!---   SECTION4      -->
@@ -233,121 +233,134 @@
                 </p>
                 <h4>5.6 Зарезервированные слова</h4>
                 <p>
-                    JavaScript резервирует ряд идентификаторов, которые играют роль ключевых слов самого языка. Эти ключевые слова не могут служить идентификаторами в программах:<br/>
-                    - break<br/>
-                    - delete<br/>
-                    - function<br/>
-                    - return<br/>
-                    - typeof<br/>
-                    - case<br/>
-                    - do<br/>
-                    - if<br/>
-                    - switch<br/>
-                    - var<br/>
-                    - catch<br/>
-                    - else<br/>
-                    - in<br/>
-                    - this<br/>
-                    - void<br/>
-                    - continue<br/>
-                    - false<br/>
-                    - instanceof<br/>
-                    - throw<br/>
-                    - while<br/>
-                    - debugger<br/>
-                    - finally<br/>
-                    - new<br/>
-                    - true<br/>
-                    - with<br/>
-                    - default<br/>
-                    - for<br/>
-                    - null<br/>
-                    - try
+                    JavaScript резервирует ряд идентификаторов, которые играют роль ключевых слов самого языка. Эти ключевые слова не могут служить идентификаторами в программах:
                 </p>
+                <ul class="item-list">
+                    <li>break</li>
+                    <li>delete</li>
+                    <li>function</li>
+                    <li>return</li>
+                    <li>typeof</li>
+                    <li>case</li>
+                    <li>do</li>
+                    <li>if</li>
+                    <li>switch</li>
+                    <li>var</li>
+                    <li>catch</li>
+                    <li>else</li>
+                    <li>in</li>
+                    <li>this</li>
+                    <li>void</li>
+                    <li>continue</li>
+                    <li>false</li>
+                    <li>instanceof</li>
+                    <li>throw</li>
+                    <li>while</li>
+                    <li>debugger</li>
+                    <li>finally</li>
+                    <li>new</li>
+                    <li>true</li>
+                    <li>with</li>
+                    <li>default</li>
+                    <li>for</li>
+                    <li>null</li>
+                </ul>
                 <p>
-                    JavaScript также резервирует некоторые ключевые слова, которые в настоящее время не являются частью языка, но которые могут войти в его состав в будущих версиях. Стандарт ECMAScript 5 резервирует следующие слова:<br/>
-                    - class</br>
-                    - const</br>
-                    - enum</br>
-                    - export</br>
-                    - extends</br>
-                    - import</br>
-                    - super
+                    JavaScript также резервирует некоторые ключевые слова, которые в настоящее время не являются частью языка, но которые могут войти в его состав в будущих версиях. Стандарт ECMAScript 5 резервирует следующие слова:
                 </p>
+                <ul class="item-list">
+                    <li>class</li>
+                    <li>const</li>
+                    <li>enum</li>
+                    <li>export</li>
+                    <li>extends</li>
+                    <li>import</li>
+                    <li>super</li>
+                </ul>
                 <p>
-                    Ниже приводится дополнительный список слов, которые допустимы в обычном программном коде JavaScript и являются зарезервированными в строгом режиме:<br/>
-                    - implements<br/>
-                    - let<br/>
-                    - private<br/>
-                    - public<br/>
-                    - yield<br/>
-                    - interface<br/>
-                    - package<br/>
-                    - protected<br/>
-                    - static
+                    Ниже приводится дополнительный список слов, которые допустимы в обычном программном коде JavaScript и являются зарезервированными в строгом режиме:
                 </p>
+                <ul class="item-list">
+                    <li>implements</li>
+                    <li>let</li>
+                    <li>private</li>
+                    <li>public</li>
+                    <li>yield</li>
+                    <li>interface</li>
+                    <li>package</li>
+                    <li>protected</li>
+                    <li>static</li>
+                </ul>
                 <p>
-                    В строгом режиме также вводится ограничение на использование следующих идентификаторов. Они не являются зарезервированными словами в полном понимании, но они не могут использоваться в качестве имен переменных, функций или параметров:<br/>
-                    - abstract<br/>
-                    - double<br/>
-                    - goto<br/>
-                    - native<br/>
-                    - static<br/>
-                    - boolean<br/>
-                    - enum<br/>
-                    - implements<br/>
-                    - package<br/>
-                    - super<br/>
-                    - byte<br/>
-                    - export<br/>
-                    - import<br/>
-                    - private<br/>
-                    - synchronized<br/>
-                    - char <br/>
-                    - extends<br/>
-                    - int<br/>
-                    - protected<br/>
-                    - throws<br/>
-                    - class<br/>
-                    - final<br/>
-                    - interface<br/>
-                    - public<br/>
-                    - transient<br/>
-                    - const<br/>
-                    - float <br/>
-                    - long<br/>
-                    - short<br/>
-                    - volatile
+                    В строгом режиме также вводится ограничение на использование следующих идентификаторов. Они не являются зарезервированными словами в полном понимании, но они не могут использоваться в качестве имен переменных, функций или параметров:
                 </p>
+                <ul class="item-list">
+                    <li>abstract</li>
+                    <li>double</li>
+                    <li>goto</li>
+                    <li>native</li>
+                    <li>static</li>
+                    <li>boolean</li>
+                    <li>enum</li>
+                    <li>implements</li>
+                    <li>package</li>
+                    <li>super</li>
+                    <li>byte</li>
+                    <li>export</li>
+                    <li>import</li>
+                    <li>private</li>
+                    <li>synchronized</li>
+                    <li>char </li>
+                    <li>extends</li>
+                    <li>int</li>
+                    <li>protected</li>
+                    <li>throws</li>
+                    <li>class</li>
+                    <li>final</li>
+                    <li>interface</li>
+                    <li>public</li>
+                    <li>transient</li>
+                    <li>const</li>
+                    <li>float </li>
+                    <li>long</li>
+                    <li>short</li>
+                    <li>volatile</li>
+                </ul>
                 <p>
-                    В языке JavaScript имеется множество предопределенных глобальных переменных и функций, имена которых не следует использовать для создания своих собственных переменных и функций:<br/>
-                    arguments encodeURI Infinity Number RegExp
-                    - Array<br/>
-                    - encodeURIComponent<br/>
-                    - isFinite<br/>
-                    - Object<br/>
-                    - String<br/>
-                    - Boolean<br/>
-                    - Error<br/>
-                    - isNaN<br/>
-                    - parseFloat<br/>
-                    - SyntaxError<br/>
-                    - Date<br/>
-                    - eval<br/>
-                    - JSON<br/>
-                    - parseInt<br/>
-                    - TypeError<br/>
-                    - decodeURI<br/>
-                    - EvalError<br/>
-                    - Math<br/>
-                    - RangeError<br/>
-                    - undefined<br/>
-                    - decodeURIComponent<br/>
-                    - Function<br/>
-                    - NaN<br/>
-                    - ReferenceError<br/>
-                    - URIError<br/>
+                    В языке JavaScript имеется множество предопределенных глобальных переменных и функций, имена которых не следует использовать для создания своих собственных переменных и функций:
                 </p>
+                <ul class="item-list">
+                    <li>arguments</li>
+                    <li>encodeURI</li>
+                    <li>Infinity</li>
+                    <li>Number</li>
+                    <li>RegExp</li>
+                    <li>Array</li>
+                    <li>encodeURIComponent</li>
+                    <li>isFinite</li>
+                    <li>Object</li>
+                    <li>String</li>
+                    <li>Boolean</li>
+                    <li>Error</li>
+                    <li>isNaN</li>
+                    <li>parseFloat</li>
+                    <li>SyntaxError</li>
+                    <li>Date</li>
+                    <li>eval</li>
+                    <li>JSON</li>
+                    <li>parseInt</li>
+                    <li>TypeError</li>
+                    <li>decodeURI</li>
+                    <li>EvalError</li>
+                    <li>Math</li>
+                    <li>RangeError</li>
+                    <li>undefined</li>
+                    <li>decodeURIComponent</li>
+                    <li>Function</li>
+                    <li>NaN</li>
+                    <li>ReferenceError</li>
+                    <li>URIError</li>
+                </ul>
             </article>
         </section>
 <!---   SECTION6      -->
@@ -362,11 +375,26 @@
                 <h3>7. Взаимодействие с пользователем</h3>
                 <h4>7.1 UI операции</h4>
                 <p>
-                    - alert
-                    - prompt
-                    - confirm
+                    UI операции позволяют работать с данными, полученными от пользователя.
                 </p>
+                <div class="object-method-wrapper">
+                    <div class="object-method">
+                        <h5>alert()</h5>
+                        <p>Выводит на экран окно с сообщением.</p>
+                    </div>
+                    <div class="object-method">
+                        <h5>prompt()</h5>
+                        <p>Возвращает то, что ввёл посетитель.</p>
+                    </div>
+                    <div class="object-method">
+                        <h5>confirm()</h5>
+                        <p>Выводит окно с вопросом.</p>
+                    </div>
+                </div>
                 <h4>7.2 Объект console</h4>
+                <p>
+                    Объект console служит для доступа к средствам отладки браузера. Работа с ним отличается в разных браузерах, но эти методы и свойства по факту поддерживаются всеми браузерами. Чаще всего консоль используется для вывода строк текста и других типов данных.
+                </p>
                 <h4>7.2.1 Методы объекта console</h4>
                 <div class="object-method-wrapper">
                     <div class="object-method">
@@ -438,7 +466,7 @@
                 </p>
                 <h4>3. Literals</h4>
                 <p> 
-                    Вывести в консоль литералы JS: Null, Boolean Literals(оба), Numeric Literals(всех систем счисления), String Literals(3 базовых) (<a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-ecmascript-language-lexical-grammar-literals">можна найти тут)</a>.
+                    Вывести в консоль литералы JS: Null, Boolean Literals(оба), Numeric Literals(всех систем счисления), String Literals(3 базовых) (<a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-ecmascript-language-lexical-grammar-literals">можна найти тут</a>).
                 </p>
                 <h4>4. Group</h4>
                 <p> 

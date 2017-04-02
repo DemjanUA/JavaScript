@@ -311,3 +311,17 @@ section article.main-article .object-method-wrapper div.object-method p {
   width: 90%;
   font-size: 14px;
 }
+
+section article ul.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 16px;
+  width: 720px;
+  font: 400 14px/24px 'Roboto', sans-serif;
+}
+
+section article ul.item-list li {
+  width: 25%;
+  margin-bottom: 10px;
+  color: rgba(255,82,82,0.87);
+}
