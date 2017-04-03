@@ -103,7 +103,7 @@ main {
 }
 /*************************************/
 pre {
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 code.hljs {
   padding: 13px 0.5em;
@@ -322,6 +322,18 @@ section article ul.item-list {
 
 section article ul.item-list li {
   width: 25%;
+  margin-bottom: 10px;
+  color: rgba(255,82,82,0.87);
+}
+
+section article ul.item-list.wide li {
+  width: 50%;
+  margin-bottom: 10px;
+  color: rgba(255,82,82,0.87);
+}
+
+section article ul.item-list.extrawide li {
+  width: 100%;
   margin-bottom: 10px;
   color: rgba(255,82,82,0.87);
 }

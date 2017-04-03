@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Урок №4 | Типы данных, преобразование типов</title>
+    <link rel="shortcut icon" href="../images/logo.ico">
+    <link rel="stylesheet" href="../css/main.css">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/atom-one-dark.css">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <a href="" class="logo">
+            <img src="../images/logo.svg" alt="logotype">
+        </a>
+    </header>
+    <main>
+        <h1 class="title">Типы данных, преобразование типов</h1>
+        <h3 class="content-list">Содержание</h3>
+        <ul class="plan">
+            <li><a href="#s1">Вступление</a></li>
+            <li><a href="#s2">Примитивы</a></li>
+            <li><a href="#s3">Классификация</a></li>
+            <li><a href="#s4">Окружение</a></li>
+            <li><a href="#s5">Лексическая структура</a></li>
+            <li><a href="#s6">Strict Mode</a></li>
+        </ul>
+<!---   SECTION1      -->
+        <section class="clearfix" id="s1">
+            <article class="main-article fl">
+                <h3>1. Вступление</h3>
+                <p>
+                    В компьютерном мире есть только данные. Можно читать данные, изменять данные, создавать новые – но кроме данных ничего нет. Все данные хранятся как длинные последовательности бит, этим они сходны между собой.
+                </p>
+                <p>
+                    В процессе работы компьютерные программы манипулируют значениями, такими как число 3,14 или текст «Hello World». Типы значений, которые могут бытпредставлены и обработаны в языке программирования, известны как типы данных, и одной из наиболее фундаментальных характеристик любого языка программирования является поддерживаемый им набор типов данных.
+                </p>
+                <p>
+                    Типы данных в JavaScript можно разделить на три категории: простые(примитивы), объект с его подтипами, и ECMAScript specification types(EST).
+                </p>
+            </article>
+        </section>
+<!---   SECTION1      -->
+        <section class="clearfix" id="s1">
+            <article class="main-article fl">
+                <h3>2. Примитивы</h3>
+                <p>К категории примитивов в языке JavaScript относятся:</p>
+                <ul class="item-list extrawide">
+                    <li>Числа (The Number Type)</li>
+                    <li>Строки (The String Type)</li>
+                    <li>Логические значения (The Boolean Type)</li>
+                    <li>Cпециальный тип Null (The Null Type)</li>
+                    <li>Cпециальный тип undefined (The Undefined Type)</li>
+                    <li>Cпециальный тип Symbol (The Symbol Type)</li>
+                </ul>
+                <h4>2.1 Числа</h4>
+                <p>
+                    В отличие от многих языков программирования, в JavaScript не делается различий между целыми и вещественными значениями. Все числа в JavaScript представляются вещественными значениями (с плавающей точкой). Для представления чисел в JavaScript используется 64-битный формат, определяемый стандартом IEEE 754.
+                </p>
+                <p>
+                    Обратите внимание, что любому числовому литералу может предшествовать знак «минус» (-), делающий числа отрицательными. Однако фактически минус представляет собой унарный оператор смены знака, не являющийся частью синтаксиса числовых литералов.
+                </p>
+                <h4>2.1.1 Числовые литералы</h4>
+                <p>
+                    В JavaScript есть 4 числовых литералов:
+                </p>
+                <p>Десятичный литерал</p>
+<!-- example --><pre><code class="JavaScript">10; // 10</code></pre>
+<!-- example --><pre><code class="JavaScript">1.2; // 1.2</code></pre>
+<!-- example --><pre><code class="JavaScript">.2; // 0.2</code></pre>
+<!-- example --><pre><code class="JavaScript">1e+2; // 100</code></pre>
+<!-- example --><pre><code class="JavaScript">1e-2; // 0.01</code></pre>
+                <p>Двоичный литерал с целыми числами</p>
+<!-- example --><pre><code class="JavaScript">0b010101; // 21</code></pre>
+<!-- example --><pre><code class="JavaScript">0B010101; // 21</code></pre>
+                <p>Восьмеричный целочисленный литерал</p>
+<!-- example --><pre><code class="JavaScript">0o714; // 460</code></pre>
+<!-- example --><pre><code class="JavaScript">0O714; // 460</code></pre>
+                <p>Шестнадцатеричный целочисленный литерал</p>
+<!-- example --><pre><code class="JavaScript">0xFFAA; // 65450</code></pre>
+<!-- example --><pre><code class="JavaScript">0XFFAA; // 65450</code></pre>
+                <h4>2.1.2 Специальные числа</h4>
+                <p>В JavaScript есть три специальных значения, которые считаются числами, но ведут себя не как обычные числа.</p>
+                <ul class="item-list extrawide">
+                    <li>Infinity</li>
+                    <li>-Infinity</li>
+                    <li>NaN</li>
+            </article>
+        </section>
+ </main>
+    <footer></footer>
+</div>
+<script src="../js/highlight.pack.js"></script>
+<script src="../js/highlightjs-line-numbers.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+<script src="../js/main.js"></script>
+</body>
+</html>
+
+<!--
+    <div class="article-images">
+        <img src="images/web publishing.png" alt="">
+    </div>
+
+    <div class="article-images small-img-7">
+        <img src="images/if else example images.jpg" alt="">
+    </div>
+
+    <div class="article-images small-img-7">
+        <img src="images/if else example images.jpg" alt="">
+    </div>
+-->
