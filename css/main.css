@@ -294,6 +294,13 @@ section article.main-article p.warning {
   padding-left: 10px;
   margin-bottom: 16px;
   border-left: 5px solid rgb(224, 102, 102);
+}
+
+section article.main-article p.info {
+  padding: 0 0 3px 10px;
+  padding-left: 10px;
+  margin-bottom: 16px;
+  border-left: 5px solid #61aeee;
 } 
 
 section article.main-article .object-method-wrapper {
@@ -305,6 +312,10 @@ section article.main-article .object-method-wrapper div.object-method {
   width: 33.333333%;
   margin-bottom: 10px;
   margin-left: 0;
+}
+
+section article.main-article .object-method-wrapper div.object-method.extrawide {
+  width: 100%;
 }
 
 section article.main-article .object-method-wrapper div.object-method p {
@@ -326,14 +337,34 @@ section article ul.item-list li {
   color: rgba(255,82,82,0.87);
 }
 
+section article ul.item-list li a {
+  color: rgba(255,82,82,0.87);
+}
+
+section article ul.item-list.short {
+  width: 100%;
+}
+
+section article ul.item-list.short li {
+  width: 15%;
+}
+
+section article ul.item-list.wide {
+  width: 100%;
+}
+
 section article ul.item-list.wide li {
   width: 50%;
-  margin-bottom: 10px;
-  color: rgba(255,82,82,0.87);
+}
+
+section article ul.item-list.extrawide {
+  width: 100%;
 }
 
 section article ul.item-list.extrawide li {
   width: 100%;
-  margin-bottom: 10px;
-  color: rgba(255,82,82,0.87);
+}
+
+section article ul.item-list.black li {
+  color: rgba(0, 0, 0, .87);
 }
