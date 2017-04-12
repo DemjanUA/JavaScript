@@ -101,6 +101,43 @@
                 </p>
             </article>
         </section>
+<!---   SECTION*      -->
+        <section class="clearfix" id="s*">
+            <article class="main-article fl">
+                <h3>*. Упражнения</h3>
+                <h4>1. nodeList</h4>
+                <p>
+                    var list = document.querySelectorAll('*'); - магическая строка создаст переменную list и запишет в нее объект со всеми тегами страницы.
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->var list = document.querySelectorAll('*');
+<!-- example --></code></pre>
+                <p>Все манипуляции делать только с list, код запускать из консоли на странице: <a href="https://demjanua.github.io/JavaScript/chapters/lesson_7.html">Тут</a></p>
+                <p>1. Выведите в консоль количество элементов на странице. (тут вам поможет цикл for..in)</p>
+                <p>2. Выведите в консоль каждый HTML-элемент страницы. (тот же перебор через цикл for..in)</p>
+                <p>3. Выведите в консоль тип каждого элемента страницы. (console.log(typeof...));</p>
+                <p>4. Создайте пустую строку, и в нее в столбик конкатенируйте название HTML-элемента. (list[key].nodeName - вернет вам название тега)</p>
+                <p>5. Узнайте сколько тегов span, div, p и a на странице (реализовать в 2 способа: indexof в цикле по строке, и перебор for..in по list c if совет: проверку вынести в функцию)</p>
+                <p>Внимание! При переборе list через цикл for..in у вас будет 5 лишних полей, это методы с типом "function" вам нужно делать проверку при переборе(typeof list[key]) если тип поля будет "function" его не учитывать.</p>
+                <h4>2. idCard</h4>
+                <p>
+                    Создайте объект с информацией о себе: имя, фамилия, дата рождения, количество копеек в кармане.
+                </p>
+                <p>
+                    Переберите циклом все свойства и выведите их в консоль в виде:
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->0 name Дима
+<!-- example -->1 fname Учкин
+<!-- example -->2 coins 0
+<!-- example -->3 дата рождения 05.10.1982
+<!-- example -->...
+<!-- example --></code></pre>
+                <p>
+                    Удалите свойство о содержании кармане.
+                </p>
+            </article>
+        </section>
     </main>
     <footer></footer>
 </div>
