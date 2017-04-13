@@ -201,6 +201,49 @@
 <!-- example --></code></pre>
             </article>
         </section>
+<!---   SECTION*      -->
+        <section class="clearfix" id="s*">
+            <article class="main-article fl">
+                <h3>*. Упражнения</h3>
+                <h4>1. compareFunctionNumber</h4>
+                <p>Напишите функцию compareFunctionNumber(a, b), которая принимает 2 аргумента и возвращает true если первый больше второго и false в ином случае. Приводить к числу оба аргумента внутри функции.</p>
+                <h4>2. compareFunctionString</h4>
+                <p>Напишите функцию compareFunctionString(a, b), которая принимает 2 аргумента и возвращает true если первый больше второго и false в ином случае. Если тип одного из аргументов не строка, возвращать false.</p>
+                <h4>3. compareFunctionString</h4>
+                <p>Напишите функцию compareFunctionType(a, type), которая принимает 2 аргумента (первый - значение, второй - строка из типом или подтипом) и возвращает true если первый принадлежит к типу второго, false в ином случае.</p>
+                <p>Список типов и подтипов, которые должна обрабатывать функция:</br>
+                    - undefined</br>
+                    - null</br>
+                    - Number</br>
+                    - NaN</br>
+                    - Infinity</br>
+                    - String</br>
+                    - Boolean</br>
+                    - Object</br>
+                    - Array</br>
+                    - Function
+                </p>
+                <p>
+                    Обратите внимание: строка 'Function', 'function', 'functiOn' должны обрабатываться одинаково (опускаем значения аргумента type в нижний регистр).
+                </p>
+                <h4>4. singleExemplar</h4>
+                <p>Напишите функцию singleExemplar(a), которая принимает 1 аргумент (массив, реализовать безопасность типов) и возвращает новый массив, где все элементы уникальны в пространстве массива.</p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->singleExemplar(a) { .. }
+<!-- example -->var myArray = [null, 1, 2, 2, 3, [1, 2], NaN, 'str', '1', {1}, null, NaN, 1, 3];
+<!-- example -->singleExemplar(singleExemplar); // [null, 1, 2, 3, [1, 2], NaN, 'str', '1', {1}]
+<!-- example --></code></pre>
+                <p>Помните: NaN не равен ничему включая себя</p>
+                <h4>5. singleExemplarStrict</h4>
+                <p>Напишите функцию singleExemplar(a), которая принимает 1 аргумент (массив, реализовать безопасность типов) и возвращает новый массив, где все элементы уникальны в пространстве массива.</p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->singleExemplar(a) { .. }
+<!-- example -->var myArray = [null, 1, 2, 2, 3, [1, 2], NaN, 'str', '1', {1}, null, NaN, 1, 3];
+<!-- example -->singleExemplar(singleExemplar); // [null, 1, 2, 3, [1, 2], NaN, 'str', '1', {1}]
+<!-- example --></code></pre>
+                <p>singleExemplar и singleExemplarStrict работают с примитивами работают аналогично. Но singleExemplarStrict считает массивы одинаковими если: 1 - их длины одинаковые, 2 - под одинаковыми индексами стоят одинаковые значения. В контексте функции singleExemplarStrict объекты одинаковые если: 1 - у них одинаковое количество ключей</p>
+            </article>
+        </section>
     </main>
     <footer></footer>
 </div>
