@@ -455,19 +455,118 @@
 <!-- example --><pre><code class="javascript">'use strict';
 <!-- example -->var list = document.querySelectorAll('*');
 <!-- example --></code></pre>
-                <p>1. Создайте массив arrList из элементов list.</p>
-                <p>2. Создайте строку из названий nodeName используя Array.prototype.join()</p>
-                <p>3. Создайте строку из названий nodeName через разделитель используя Array.prototype.join()</p>
-                <p><u>4. Отсортируйте массив arrList от функций, используя sort()</u></p>
-                <p>5. Отсортируйте массив arrList по названию тега в алфавитном порядке</p>
-                <p>6. Отсортируйте массив arrList по названию тега в обратном от задания №5 порядке(не используя Array.reverse())</p>
-                <p>7. Заданние №6 используя Array.reverse()</p>
-                <p>9. Создайте массив arrListPlusChildren из элементов массива arrList и их потомков.</p>
-                <p>10. Создайте массив из 100 элементов массива arrList используя slice().</p>
-                <p>11. Выведите в консоль все элементы arrList не используя циклов.</p>
-                <p>11. Создайте массив из nodeName элементов arrList не используя циклов.</p>
-                <p>12. Создайте массив из withoutSpan c элементов arrList не используя циклов, откинув все span элементы.</p>
-                <p>13. Создайте массив из withoutElemens c элементов arrList не используя циклов, откинув все elemets. Написать функции с 2 аргументами, 1 - масиив, 2 - строка с названием элемента.</p>
+                <p>6.1 Создайте массив arrList из элементов объекта list.</p>
+                <p>6.2 Создайте строку из названий всех тегов html-элементов - nodeName, используя Array.prototype.join().</p>
+                <p>6.3 Создайте строку из названий всех тегов через разделитель, используя Array.prototype.join().</p>
+                <p>6.4 Отсортируйте массив arrList от функций, используя sort().</p>
+                <p class="warning">
+                    Для корректной работы метода sort() всем элементам масива arrList нужно изменить свойство:
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->// Example
+<!-- example -->var arrList = [{x : 1}, {x : 3}, {x : 4}, {x : 2}];
+<!-- example -->arrList.forEach((e) => {
+<!-- example -->	e.toString = function() {
+<!-- example -->		return this;
+<!-- example -->	};
+<!-- example -->});
+<!-- example --></code></pre>
+                <p>6.5 Отсортируйте элементы массива arrList по названию тега в алфавитном порядке.</p>
+                <p>6.6 Отсортируйте элементы массива массиа arrList по названию тега в обратном от задания №5 порядке (не используя Array.reverse()), результат сохранить в arrListReverse.</p>
+                <p>6.7 Заданние №6 используя Array.reverse().</p>
+                <p>6.8 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam ea repellendus dicta similique quibusdam repellat delectus totam sint voluptate, quidem reiciendis labore, nihil error iusto a, placeat minus hic. Quas!.</p>
+                <p>6.9 Создайте массив arrListPlusChildren из элементов массива arrList и их потомков.</p>
+                <p>6.10 Создайте массив из 100 элементов массива arrList используя slice().</p>
+                <p>6.11 Выведите в консоль все элементы arrList не используя циклов.</p>
+                <p>6.12 Создайте массив из nodeName элементов arrList не используя циклов.</p>
+                <p>6.13 Создайте массив из withoutSpan c элементов arrList не используя циклов, откинув все span элементы.</p>
+                <p>6.14 Напишите функцию createWithoutElemens(arr, str), arr - массив элементов, str - строка с названием эле­мен­тов, которые нужно отсеять в процессе работы функции. Функция возвращает новый массив.</p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->// Example
+<!-- example -->function createWithoutElemens(arr, str) {
+<!-- example -->    ...
+<!-- example -->}
+<!-- example -->
+<!-- example -->var arrList = [
+<!-- example -->    {x : 1, nodeName : 'SPAN'},
+<!-- example -->    {x : 2, nodeName : 'DIV'},
+<!-- example -->    {x : 3, nodeName : 'SPAN'},
+<!-- example -->    {x : 4, nodeName : 'P'},
+<!-- example -->    {x : 5, nodeName : 'SPAN'},
+<!-- example -->    {x : 6, nodeName : 'DIV'}
+<!-- example -->];
+<!-- example -->createWithoutElemens(arrList, 'span'); // }-->
+<!-- example -->    // {x : 2, nodeName : 'DIV'},
+<!-- example -->    // {x : 4, nodeName : 'P'},
+<!-- example -->    // {x : 6, nodeName : 'DIV'}
+<!-- example -->createWithoutElemens(arrList, 'DIV'); // }-->
+<!-- example -->    // {x : 1, nodeName : 'SPAN'},
+<!-- example -->    // {x : 3, nodeName : 'SPAN'},
+<!-- example -->    // {x : 4, nodeName : 'P'},
+<!-- example -->    // {x : 5, nodeName : 'SPAN'}
+<!-- example --></code></pre>
+                <p>6.15 Напишите аналог функции createWithoutElemens(arr, str), arr - массив элементов, str - строка с названием эле­мен­тов или массив таких строк, которые нужно отсеять в процессе работы функции. Функция возвращает новый массив.</p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->// Example
+<!-- example -->function createWithoutElemens(arr, str) {
+<!-- example -->    ...
+<!-- example -->}
+<!-- example -->
+<!-- example -->var arrList = [
+<!-- example -->    {x : 1, nodeName : 'SPAN'},
+<!-- example -->    {x : 2, nodeName : 'DIV'},
+<!-- example -->    {x : 3, nodeName : 'SPAN'},
+<!-- example -->    {x : 4, nodeName : 'P'},
+<!-- example -->    {x : 5, nodeName : 'SPAN'},
+<!-- example -->    {x : 6, nodeName : 'DIV'}
+<!-- example -->];
+<!-- example -->createWithoutElemens(arrList, 'span'); // }-->
+<!-- example -->    // {x : 2, nodeName : 'DIV'},
+<!-- example -->    // {x : 4, nodeName : 'P'},
+<!-- example -->    // {x : 6, nodeName : 'DIV'}
+<!-- example -->createWithoutElemens(arrList, ['SPAN', 'DIV']); // }-->
+<!-- example -->    // {x : 4, nodeName : 'P'}
+<!-- example --></code></pre>
+                <p>7. Напишите функцию createRectangle(m, n), Функция возвращает пустой прямоугольный массив m на n. m - количество столбиков, n - количество рядов. n и m генерировать рандомно ( 2 < n 12, 4 < m 6).</p>
+                <div class="article-images">
+                    <img src="images/lesson_8_2(ex_16).png" alt="">
+                </div>
+                <p>
+                    Напишите функцию createLetter(). Функция возвращает объект - письмо.</br>
+                    Письмо:</br>
+                    - адресат (destination) - создайте массив people, где каждый элемент объект person и случайным образом получайте это поле.</br>
+                    - адресант (addressee) - также из массива people.</br>
+                    - время создания (creationTime) - случайное число 0 - new Date().getTime();</br>
+                    - тема (subject) - создайте функцию генерирующую тему из случайного количества слов (1 - 4) каждое слово размером 2 - 8 символов.</br>
+                    - сообщение (message) - создайте функцию генерирующую message, можно использовать функцию из задания №10 в уроке 6.2.
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->// Example letter
+<!-- example -->{
+<!-- example -->    destination : {
+<!-- example -->        firstName : 'Igor',
+<!-- example -->        lastName : 'Igorov',
+<!-- example -->        address : 'avenue Pupkina, 14b'
+<!-- example -->    },
+<!-- example -->    addressee : {
+<!-- example -->        firstName : 'Ivan',
+<!-- example -->        lastName : 'Ivanov',
+<!-- example -->        address : 'Vesuvius vol., 3 palm trees to the right from bar "White coconut"'
+<!-- example -->    },
+<!-- example -->    creationTime : 900000,
+<!-- example -->    subject : 'Lorem ipsum dolor.',
+<!-- example -->    message : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. \
+<!-- example -->                Excepturi quidem culpa corporis laudantium, \
+<!-- example -->                magnam, eos numquam animi quam.'
+<!-- example -->}
+<!-- example --></code></pre>
+                <p>Положите на случайные позиции массива созданого функциией createRectangle, случайное количество писем из случайным содержимым.</p>
+                <p>
+                    Подсчитайте количество писем в массиве.
+                </p>
+                <p>
+                    Наклейте на каждое письмо марку с картинкой, картинки найти в google. (Добавляем поле stamp из ссылкой на картинку).
+                </p>
             </article>
         </section>
     </main>
