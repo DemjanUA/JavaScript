@@ -108,15 +108,15 @@
                 </p>
 <!-- example --><pre><code class="javascript">'use strict';
 <!-- example -->var str = "absdefgs";
-<!-- example -->alert( str.indexOf(s) ); // 4
-<!-- example -->alert( str.indexOf(s, 5) ); // 9
-<!-- example -->alert( str.indexOf(L, 5) ); // -1
+<!-- example -->alert( str.indexOf('s') ); // 2
+<!-- example -->alert( str.indexOf('s', 5) ); // 7
+<!-- example -->alert( str.indexOf('L', 5) ); // -1
 <!-- example --></code></pre>
                 <h4>2.7 Взятие подстроки</h4>
                 <p>В JavaScript существуют 3 метода для взятия подстроки, с небольшими отличиями между ними.</p>
-                <h4>2.7.1 Метод substr</h4>
+                <h4>2.7.1 Метод substring</h4>
                 <p>substring(from [, to]) метод возвращает подстроку с позиции from до, но не включая to.</p>
-                <h4>2.7.2 Метод substring</h4>
+                <h4>2.7.2 Метод substr</h4>
                 <p>substr(from [, value]) метод возвращает подстроку с позиции from в количестве символов value</p>
                 <h4>2.7.3 Метод slice</h4>
                 <p>slice(from [, to]) метод возвращает часть строки от позиции start до, но не включая, позиции end. Смысл параметров – такой же как в substring.</p>
@@ -190,7 +190,7 @@
                     - trimLeft - Обрезает пробельные символы с левой стороны строки</br>
                     - trimRight - Обрезает пробельные символы с правой стороны строки.
                 </p>
-                <h4>13. indexOfAll</h4>
+                <h4>14. indexOfAll</h4>
                 <p>
                     Напишите функцию indexOfAll(base, str), которая возвращает список всех вхождений str в строке base 
                 </p>

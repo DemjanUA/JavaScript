@@ -338,6 +338,24 @@
 <!-- example -->var roots = numbers.map(Math.sqrt);
 <!-- example -->// теперь roots равен [1, 2, 3], а numbers всё ещё равен [1, 4, 9]
 <!-- example --></code></pre>
+                <p>
+                    Функция map просто преобразует один массив в другой массив. Например, предположим, что у вас есть массив объектов person, но вам нужен массив name (строк):
+                </p>
+                <div class="article-images small-img-7">
+                    <img src="images/lesson_8_2(method_map).png" alt="">
+                </div>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->var friends = [
+<!-- example -->    {id:1, name: 'Dave',age:50},
+<!-- example -->    {id:2,name: 'Kellie',age:42},
+<!-- example -->    {id:3,name: 'Max',age:12},
+<!-- example -->    {id:2,name: 'Jack',age:12}
+<!-- example -->];
+<!-- example -->var friendsNamesList = friends.map(function(element) {
+<!-- example -->    return element.name;
+<!-- example -->}); ["Dave", "Kellie", "Max", "Jack"]
+<!-- example -->// ["Dave", "Kellie", "Max", "Jack"]
+<!-- example --></code></pre>
                 <h4>8.2.3 Метод filter()</h4>
                 <p>
                     Метод filter() возвращает массив, содержащий подмножество элементов исходного массива. Передаваемая ему функция должна быть функцией-предикатом, т. е. должна возвращать значение true или false. Метод filter() вызывает функцию точно так же, как методы forEach() и map(). Если возвращается true или значение, которое может быть преобразовано в true, переданный функции элемент считается членом подмножества и добавляется в массив, возвращаемый методом. Например:
