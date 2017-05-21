@@ -1,5 +1,6 @@
 @import 'font.css';
 @import 'mainpage.css';
+@import 'pickButtonsBar.css';
 /*NORMALIZE*/
 html, p { 
   margin: 0;

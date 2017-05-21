@@ -53,3 +53,37 @@ var LogoScroll = function(node) {
 
 new ScrollControler(document.querySelector('header')).constructor();
 new LogoScroll(document.querySelector('a.logo')).constructor();
+
+
+var PickButtonsBar = function() {
+    this.constructor = function () {
+        console.log('build ---------->', this);
+
+
+        let itemPack = document.createDocumentFragment();
+        this.buttonList.forEach(e => {
+            let item = e.cloneNode(2);
+            itemPack.appendChild(item);
+        });
+        this.bar.appendChild(itemPack);
+
+        this.bar.addEventListener('click', function(e) {
+            if (e.target.nodeName.toLowerCase() === 'a') {
+                console.log(e.target);
+            }
+        });
+
+        return this;
+    }
+    this.plan = document.querySelector('[data-component="pickButtonsBar"]');
+    this.bar = document.querySelector('.pick-buttons-bar');
+    this.buttonList = Array.prototype.map.call(this.plan.children, e => e);
+}
+
+if (document.querySelector('[data-component="pickButtonsBar"]') && document.querySelector('.pick-buttons-bar')) {
+    new PickButtonsBar().constructor();
+}
+
+window.onscroll = function() {
+	console.log('yep');
+}
