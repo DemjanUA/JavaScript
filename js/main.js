@@ -3,6 +3,16 @@
 var ScrollControler = function(node) {
     this.constructor = function () {
         console.log('build ---------->', this);
+
+        if (document.querySelector('[data-component="pickButtonsBar"]') && document.querySelector('.pick-buttons-bar')) {
+            this.pickButtonsBar = new PickButtonsBar().constructor();
+
+            window.addEventListener('scroll', () => {
+                this.pickButtonsBar.pickButtonChange();
+            });
+        }
+
+
         window.addEventListener('scroll', () => {
             if (window.pageYOffset === 0) {
                 this.lock();
@@ -51,9 +61,6 @@ var LogoScroll = function(node) {
     };
 } 
 
-new ScrollControler(document.querySelector('header')).constructor();
-new LogoScroll(document.querySelector('a.logo')).constructor();
-
 
 var PickButtonsBar = function() {
     this.constructor = function () {
@@ -61,29 +68,43 @@ var PickButtonsBar = function() {
 
 
         let itemPack = document.createDocumentFragment();
-        this.buttonList.forEach(e => {
+        this.itemList.forEach(e => {
             let item = e.cloneNode(2);
             itemPack.appendChild(item);
         });
         this.bar.appendChild(itemPack);
 
+        this.buttonList = Array.prototype.map.call(this.bar.children, e => e);
+        this.activeButton = this.buttonList[0];
+        this.activeButton.classList.add('active');
+
         this.bar.addEventListener('click', function(e) {
             if (e.target.nodeName.toLowerCase() === 'a') {
-                console.log(e.target);
+                //console.log(e.target);
             }
         });
 
         return this;
-    }
+    };
     this.plan = document.querySelector('[data-component="pickButtonsBar"]');
     this.bar = document.querySelector('.pick-buttons-bar');
-    this.buttonList = Array.prototype.map.call(this.plan.children, e => e);
+    this.itemList = Array.prototype.map.call(this.plan.children, e => e);
+    this.sectionList = Array.prototype.map.call(document.querySelectorAll('section'), e => e);
 }
 
-if (document.querySelector('[data-component="pickButtonsBar"]') && document.querySelector('.pick-buttons-bar')) {
-    new PickButtonsBar().constructor();
-}
+PickButtonsBar.prototype.pickButtonChange = function() {
+    this.sectionList.some((e, index) => {
+        let positionOfStart = e.getBoundingClientRect().top + window.pageYOffset - 65;
+        let positionOfEnd = positionOfStart + e.clientHeight  - 65;
 
-window.onscroll = function() {
-	console.log('yep');
-}
+        if (window.pageYOffset >= positionOfStart && window.pageYOffset <= positionOfEnd) {
+            this.activeButton.classList.remove('active');
+            this.activeButton = this.buttonList[index];
+            this.activeButton.classList.add('active');
+            return true;
+        }
+    });
+};
+
+new ScrollControler(document.querySelector('header')).constructor();
+new LogoScroll(document.querySelector('a.logo')).constructor();

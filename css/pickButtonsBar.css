@@ -26,7 +26,8 @@ ul.pick-buttons-bar li a {
   border-radius: 50%;
   text-indent: -999px;
   overflow: hidden;
+  transition: background .2s;
 }
-ul.pick-buttons-bar li a.active {
+ul.pick-buttons-bar li.active a {
   background: rgba(255, 82, 82, 1);
 }
