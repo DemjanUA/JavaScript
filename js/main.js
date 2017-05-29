@@ -15,9 +15,9 @@ var ScrollControler = function(node) {
 
         window.addEventListener('scroll', () => {
             if (window.pageYOffset === 0) {
-                this.lock();
+                lock();
             }  else if (!this.unlockFlag) {
-                this.unlock();
+                unlock();
             }
         });
         return this;
@@ -26,15 +26,15 @@ var ScrollControler = function(node) {
     this.node = node;
     this.unlockFlag = 0;
 
-    this.lock = function() {
+    var lock = (function() {
         this.node.dataset['locker'] = 'lock';
         this.unlockFlag = 0;
-    };
+    }).bind(this);
 
-    this.unlock = function() {
+    var unlock = (function() {
         this.node.dataset['locker'] = 'unlock';
         this.unlockFlag = 1;
-    };
+    }).bind(this);
 }
 
 var LogoScroll = function(node) {
@@ -107,4 +107,4 @@ PickButtonsBar.prototype.pickButtonChange = function() {
 };
 
 new ScrollControler(document.querySelector('header')).constructor();
-new LogoScroll(document.querySelector('a.logo')).constructor();
+document.querySelector('a.logo') && new LogoScroll(document.querySelector('a.logo')).constructor();
