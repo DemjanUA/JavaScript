@@ -102,6 +102,37 @@ body {
 main {
   margin: 0 auto;
 }
+/*ScrollBar rules*/
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  min-height: 48px;
+  background: #d2d2d2;
+  background-clip: padding-box;
+  border: 3px solid #fff;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #888;
+  border-width: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
 /*************************************/
 pre {
   margin-bottom: 16px;
