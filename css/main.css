@@ -1,6 +1,7 @@
 @import 'font.css';
 @import 'mainpage.css';
 @import 'pickButtonsBar.css';
+@import 'templates.css';
 /*NORMALIZE*/
 html, p { 
   margin: 0;
@@ -103,19 +104,19 @@ main {
   margin: 0 auto;
 }
 /*ScrollBar rules*/
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   -webkit-appearance: none;
 }
 
-::-webkit-scrollbar-button {
+body::-webkit-scrollbar-button {
   display: none;
 }
 
-::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
   background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   min-height: 48px;
   background: #d2d2d2;
   background-clip: padding-box;
@@ -123,12 +124,12 @@ main {
   border-radius: 5px;
 }
 
-::-webkit-scrollbar-thumb:active {
+body::-webkit-scrollbar-thumb:active {
   background: #888;
   border-width: 2px;
 }
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 10px;
 }
 
@@ -281,34 +282,6 @@ section article .article-images {
   margin-bottom: 16px;
 }
 
-section article .article-images img {
-  display: block;
-  font-size: 0;
-  line-height: 0;
-  max-width: 100%;
-}
-
-section article .article-images.small-img img {
-  margin: 0 auto;
-  max-width: 50%;
-}
-
-section article .article-images.small-img-7 img {
-  margin: 0 auto;
-  max-width: 70%;
-}
-
-section article .article-images.small-img-9 img {
-  margin: 0 auto;
-  max-width: 90%;
-}
-
-section article .article-images.small-img-5 img {
-  margin: 0 auto;
-  max-width: 50%;
-}
-
-
 section article div.object-property,
 section article div.object-method {
   margin-left: 15px;
@@ -324,29 +297,6 @@ section article div.object-method h5 {
 section article div.object-property p,
 section article div.object-method p {
   padding-bottom: 5px;
-}
-
-section article.main-article p.warning {
-  padding: 0 0 3px 10px;
-  padding-left: 10px;
-  margin-bottom: 16px;
-  border-left: 5px solid rgb(224, 102, 102);
-}
-
-section article.main-article p.info {
-  padding: 0 0 3px 10px;
-  padding-left: 10px;
-  margin-bottom: 16px;
-  border-left: 5px solid #61aeee;
-}
-
-section article.main-article p.blockquote {
-  padding: 0 0 3px 10px;
-  padding: 1rem 1rem 1rem 1.75rem;
-  margin-bottom: 16px;
-  border-left: .25rem solid #eee;
-  font-style: italic;
-  color: #999;
 } 
 
 section article.main-article .object-method-wrapper {

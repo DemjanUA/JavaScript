@@ -1,0 +1,54 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #e34a54;
+}
+
+.frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.frame.frame1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    background: #e34a54;
+}
+
+.frame.frame1 p {
+    font-size: 25.5555vh;
+    height: 1em;
+    width: 1em;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    transition: background-color .2s ease;
+    cursor: pointer;
+    background: url(../img/playButton.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.frame.frame1 p:hover {
+    background-color: rgba(255, 255, 255, .05);
+}
+
+.frame.frame2 {
+    z-index: 98;
+    background: url('../img/JS Hero.jpg') no-repeat center center;
+    background-size: cover;
+}

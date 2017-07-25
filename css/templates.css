@@ -1,0 +1,68 @@
+section article.main-article p.warning,
+section article.main-article p.info,
+section article.main-article p.blockquote,
+section article.main-article p.note {
+  padding: 0 0 3px 10px;
+  padding-left: 10px;
+  margin-bottom: 16px;
+  border-left: .25rem solid transparent;
+}
+
+section article.main-article p.warning {
+  border-color: rgb(224, 102, 102);
+}
+
+section article.main-article p.info {
+  border-color: #61aeee;
+}
+
+section article.main-article p.note {
+  border-color: rgb(68, 68, 68);
+}
+
+section article.main-article p.blockquote {
+  padding: 1rem 1rem 1rem 1.75rem;
+  border-color: #eee;
+  font-style: italic;
+  color: #999;
+}
+/********************************************/
+section article.main-article p.code {
+  padding: 13.6px 16px 13.6px 16px;
+  font-family: 'Consolas', "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 14px;
+  line-height: 27.2px;
+  background-color: rgb(247, 247, 247);
+}
+
+section article.main-article p.code>span {
+  display: block;
+}
+/********************************************/
+section article .article-images img {
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  max-width: 100%;
+}
+
+section article .article-images.small-img img {
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+section article .article-images.small-img-7 img {
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+section article .article-images.small-img-9 img {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+section article .article-images.small-img-5 img {
+  margin: 0 auto;
+  max-width: 50%;
+}
+/********************************************/
