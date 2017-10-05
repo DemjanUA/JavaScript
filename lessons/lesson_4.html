@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Урок №4 | Типы данных, преобразование типов</title>
+    <link rel="shortcut icon" href="../images/logo.ico">
+    <link rel="stylesheet" href="../css/main.css">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/atom-one-dark.css">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <a class="go-home-page clearfix" href="../index.html">
+            <svg class="fl" xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+            </svg>
+            <span class="fl">Home</span>
+        </a>
+        <a href="" class="logo">
+            <img src="../images/logo.svg" alt="logotype">
+        </a>
+    </header>
+    <main>
+        <h1 class="title">Типы данных, преобразование типов</h1>
+        <h3 class="content-list">Содержание</h3>
+        <ul class="plan">
+            <li><a href="#s1">Вступление</a></li>
+            <li><a href="#s2">Примитивы</a></li>
+            <li><a href="#s3">Оператор typeof</a></li>
+            <li><a href="#s4">Объектный тип данных</a></li>
+            <li><a href="#s5">Иммутабельность примитивов и ссылочность объектного типа</a></li>
+        </ul>
+<!---   SECTION1      -->
+        <section class="clearfix" id="s1">
+            <article class="main-article fl">
+                <h3>1. Вступление</h3>
+                <p>
+                    В компьютерном мире есть только данные. Можно читать данные, изменять данные, создавать новые – но кроме данных ничего нет. Все данные хранятся как длинные последовательности бит, этим они сходны между собой.
+                </p>
+                <p>
+                    В процессе работы компьютерные программы манипулируют значениями, такими как число 3,14 или текст «Hello World». Типы значений, которые могут бытпредставлены и обработаны в языке программирования, известны как типы данных, и одной из наиболее фундаментальных характеристик любого языка программирования является поддерживаемый им набор типов данных.
+                </p>
+                <p>
+                    Типы данных в JavaScript можно разделить на три категории: простые(примитивы), объект с его подтипами, и ECMAScript specification types(EST).
+                </p>
+            </article>
+        </section>
+<!---   SECTION2      -->
+        <section class="clearfix" id="s2">
+            <article class="main-article fl">
+                <h3>2. Примитивы</h3>
+                <p>К категории примитивов в языке JavaScript относятся:</p>
+                <ul class="item-list extrawide">
+                    <li><a href="#NumberType">Числа (The Number Type)</a></li>
+                    <li><a href="#StringType">Строки (The String Type)</a></li>
+                    <li><a href="#BooleanType">Логические значения (The Boolean Type)</a></li>
+                    <li><a href="#NullType">Cпециальный тип Null (The Null Type)</a></li>
+                    <li><a href="#UndefinedType">Cпециальный тип undefined (The Undefined Type)</a></li>
+                    <li><a href="#SymbolType">Cпециальный тип Symbol (The Symbol Type)</a></li>
+                </ul>
+                <h4 id="NumberType">2.1 Числа</h4>
+                <p>
+                    В отличие от многих языков программирования, в JavaScript не делается различий между целыми и вещественными значениями. Все числа в JavaScript представляются вещественными значениями (с плавающей точкой). Для представления чисел в JavaScript используется 64-битный формат, определяемый стандартом IEEE 754.
+                </p>
+                <p>
+                    Обратите внимание, что любому числовому литералу может предшествовать знак «минус» (-), делающий числа отрицательными. Однако фактически минус представляет собой унарный оператор смены знака, не являющийся частью синтаксиса числовых литералов.
+                </p>
+                <h4>2.1.1 Числовые литералы</h4>
+                <p>
+                    В JavaScript есть 4 числовых литералов:
+                </p>
+                <p>Десятичный литерал</p>
+<!-- example --><pre><code class="JavaScript">10; // 10</code></pre>
+<!-- example --><pre><code class="JavaScript">1.2; // 1.2</code></pre>
+<!-- example --><pre><code class="JavaScript">.2; // 0.2</code></pre>
+<!-- example --><pre><code class="JavaScript">1e+2; // 100</code></pre>
+<!-- example --><pre><code class="JavaScript">1e-2; // 0.01</code></pre>
+                <p>Двоичный литерал с целыми числами</p>
+<!-- example --><pre><code class="JavaScript">0b010101; // 21</code></pre>
+<!-- example --><pre><code class="JavaScript">0B010101; // 21</code></pre>
+                <p>Восьмеричный целочисленный литерал</p>
+<!-- example --><pre><code class="JavaScript">0o714; // 460</code></pre>
+<!-- example --><pre><code class="JavaScript">0O714; // 460</code></pre>
+                <p>Шестнадцатеричный целочисленный литерал</p>
+<!-- example --><pre><code class="JavaScript">0xFFAA; // 65450</code></pre>
+<!-- example --><pre><code class="JavaScript">0XFFAA; // 65450</code></pre>
+                <h4>2.1.2 Специальные числа</h4>
+                <p>В JavaScript есть три специальных значения, которые считаются числами, но ведут себя не как обычные числа.</p>
+                <ul class="item-list extrawide">
+                    <li>Infinity</li>
+                    <li>-Infinity</li>
+                    <li>NaN</li>
+                </ul>
+                <h4>2.1.2 NaN</h4>
+                <p>
+                    Если математическая операция не может быть совершена, то возвращается специальное значение NaN (Not-A-Number).
+                </p>
+                <p>
+                    Например, деление 0/0 в математическом смысле неопределено, поэтому его результат NaN.
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->alert( 0 / 0 ); // NaN
+<!-- example --></code></pre>
+                <p>
+                    Значение NaN используется для обозначения математической ошибки и обладает следующими свойствами:
+                </p>
+                <ul class="item-list extrawide">
+                    <li>
+                        <p>Значение NaN – единственное, в своем роде, которое не равно ничему, включая себя.</p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->NaN == NaN // false
+<!-- example --></code></pre>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->NaN === NaN // false
+<!-- example --></code></pre>
+                    </li>
+                    <li>
+                        <p>Значение NaN можно проверить специальной функцией isNaN(n), которая преобразует аргумент к числу и возвращает true.</p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->alert(isNaN(5)); // false
+<!-- example --></code></pre>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->alert(isNaN(NaN)); // true
+<!-- example --></code></pre>
+                    </li>
+                    <li>
+                        <p>Значение NaN «прилипчиво». Любая операция с NaN возвращает NaN.</p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->alert( NaN + 1 ); // NaN
+<!-- example --></code></pre>
+                    </li>
+                </ul>
+                <p class="info">Никакие математические операции в JavaScript не могут привести к ошибке или «обрушить» программу. В худшем случае, результат будет NaN.</p>
+                <h4>2.1.3 Infinity</h4>
+                <p>
+                    Infinity – особенное численное значение, которое ведет себя в точности как математическая бесконечность ∞.
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->Infinity === Infinity // true
+<!-- example -->Infinity === -Infinity // false
+<!-- example -->Infinity > Infinity // false
+<!-- example -->Infinity > -Infinity // true
+<!-- example -->-Infinity < Infinity // true
+<!-- example --></code></pre>
+                <h4>2.1.4 Проверка на число</h4>
+                <p>
+                    Глобальная isFinite() функция определяет, является ли переданное значение конечным числом. Если необходимо, параметр сначала преобразуется в число.
+                </p>
+                <h4>2.1.5 Методы объекта Number</h4>
+                <div class="object-method-wrapper">
+                    <div class="object-method extrawide">
+                        <h5>&#60;Number&#62;.toPrecision()</h5>
+                        <p>Метод toPrecision() возвращает <strong>строку</strong>, представляющую объект Number с указанной точностью.</p>
+                    </div> 
+                    <div class="object-method extrawide">
+                        <h5>&#60;Number&#62;.toLocaleString()</h5>
+                        <p>Метод toLocaleString() возвращает строку с языко-зависимым представлением числа.</p>
+                    </div> 
+                    <div class="object-method extrawide">
+                        <h5>&#60;Number&#62;.toExponential</h5>
+                        <p>Метод toExponential() возвращает <strong>строку</strong>, представляющую объект Number в экспоненциальной записи.</p>
+                    </div> 
+                    <div class="object-method extrawide">
+                        <h5>&#60;Number&#62;.toFixed()</h5>
+                        <p>Метод toFixed() форматирует число, используя запись с фиксированной запятой.</p>
+                    </div> 
+                </div>
+                <h4 id="StringType">2.2 Строки</h4>
+                <p>
+                    Следующий базовый тип данных – строки. <strong>Строка</strong> – это неизменяемая, упорядоченная последовательность 16-битных значений, каждое из которых обычно представляет символ Юникода. Строки в JavaScript являются типом данных, используемым для представления текста. Длина строки – это количество 16-битных значений, содержащихся в ней. Нумерация символов в строках (и элементов в массивах) в языке JavaScript начинается с нуля: первое 16-битное значение находится в позиции 0, второе – в позиции 1 и т.д. Они используются для хранения текста. Записываются они в строковых литералах:
+                    <br/>
+                    <br/>
+                    <u>Пример</u>
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->'This is my string';
+<!-- example -->"This is my string";
+<!-- example -->`This is my string`;
+<!-- example --></code></pre>
+                <p>
+                    В ECMAScript 3 строковые литералы должны записываться в одной строке программы и не могут разбиваться на две строки. Однако в ECMAScript 5 строковые литералы можно разбивать на несколько строк, заканчивая каждую строку, кроме последней, символом обратного слэша (\). Ни один из символов обратного слэша, как и следующие за ними символы перевода строки, не будут включены в строковый литерал.</p>
+                <h4>2.2.1 Экранирование символов</h4>
+                <p>
+                    Если строка в одинарных кавычках, то внутренние одинарные кавычки внутри должны быть экранированы, то есть снабжены обратным слешем \', вот так:
+                    <br/>
+                    <br/>
+                    <u>Пример</u>
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->'It\'s my string'; //It's my string
+<!-- example -->'This is my \"string\"'; //This is my "string"
+
+<!-- example -->"'It\'s my string"; //It's my string
+
+<!-- example -->`It's "string"`; // It's my string
+<!-- example --></code></pre>
+                <h4>2.2.2 Экранирование символов</h4>
+                <p>
+                    Строки могут содержать специальные символы. Самый часто используемый из таких символов – это «перевод строки».
+                    <br/>
+                    <br/>
+                    <u>Пример</u>
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->alert( 'Привет\nМир' ); // выведет "Мир" на новой строке
+<!-- example --></code></pre>
+                <p>Есть и более редкие символы, вот их список:</p>
+                <ul class="item-list wide black">
+                    <li>\b</li>
+                    <li>\t</li>
+                    <li>\n</li>
+                    <li>\v</li>
+                    <li>\f</li>
+                    <li>\r</li>
+                    <li>\\</li>
+                    <li>\'</li>
+                    <li>\"</li>
+                </ul>
+                <h4 id="BooleanType">2.3 Логические значения</h4>
+                <p>
+                    Логическое значение говорит об истинности или ложности чего-то. Логический тип данных имеет только два допустимых логических значения. Эти два значения представлены литералами true и false.
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->true;
+<!-- example -->false;
+<!-- example --></code></pre>
+                <h4 id="NullType">2.4 Cпециальный тип Null</h4>
+                <p>
+                    В JavaScript null не является «ссылкой на несуществующий объект» или «нулевым указателем», как в некоторых других языках. Это просто специальное значение, которое имеет смысл «ничего» или «значение неизвестно».
+                </p>
+                <h4 id="UndefinedType">2.5 Cпециальный тип undefined</h4>
+                <p>
+                    В языке JavaScript имеется еще одно значение, свидетельствующее об отсутствии значения. Значение undefined, указывающее на полное отсутствие какого-либо значения. Оно возвращается при обращении к переменной, которой никогда не присваивалось значение, а также к несуществующему свойству объекта или элементу массива. Кроме того, значение undefined возвращается функциями, не имеющими возвращаемого значения, и присваивается параметрам функций для аргументов, которые не были переданы при вызове.
+                </p>
+                <p>
+                    Идентификатор undefined является именем предопределенной глобальной переменной (а не ключевым словом, как null), которая инициализирована значением undefined. В ECMAScript 3 undefined является переменной, доступной для чтения/записи, которой можно присвоить любое другое значение. Эта проблема была исправлена в ECMAScript 5, и в реализациях JavaScript, соответствующих этому стандарту, переменная undefined доступна только для чтения.
+                </p>
+                <p>
+                    Значение undefined можно рассматривать как признак неожиданного или ошибоч ного отсутствия какого-либо значения, а null – как признак обычного или вполне ожидаемого отсутствия значения. Если в программе потребуется присвоить одно из этих значений переменной или свойству или передать одно из этих значений функции, практически всегда предпочтительнее использовать значение null.
+                </p>
+                <h4 id="SymbolType">2.6 Cпециальный тип Symbol</h4>
+                <p>
+                    <strong>Символы</strong> – новый примитивный тип, предназначенный для уникальных идентификаторов.
+                </p>
+                <p>
+                    Основная область использования символов – это системные свойства объектов, которые задают разные аспекты их поведения. Поддержка у них пока небольшая, но она растёт. Системные символы позволяют разработчикам стандарта добавлять новые «особые» свойства объектов, при этом не резервируя соответствующие строковые значения.
+                </p>
+            </article>
+        </section>
+<!---   SECTION3      -->
+        <section class="clearfix" id="s3">
+            <article class="main-article fl">
+                <h3>3. Оператор typeof</h3>
+                <p>
+                    Унарный оператор typeof помещается перед единственным операндом, который может иметь любой тип. Его значением является строка, указывающая на тип данных операнда.
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->typeof null; // "object"
+<!-- example -->typeof undefined; // "undefined" 
+<!-- example -->typeof Number(); // "number"
+<!-- example -->typeof String(); // "string"
+<!-- example -->typeof Boolean(); // "boolean"
+<!-- example -->typeof Symbol(); // "symbol"
+<!-- example -->typeof Object(); // "object"
+<!-- example -->typeof function() {} //"function"
+<!-- example --></code></pre>
+                <p>
+                    У оператор typeof есть два синтаксиса: со скобками и без:
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->var x = null;
+<!-- example -->typeof x; // "object"
+<!-- example -->typeof(x); // "object" 
+<!-- example --></code></pre>
+                <p>Работают они одинаково, но первый синтаксис короче.</p>
+            </article>
+        </section>
+<!---   SECTION4      -->
+        <section class="clearfix" id="s4">
+            <article class="main-article fl">
+                <h3>4. Объектный тип данных</h3>
+                <p>
+                    Объекты в языке JavaScript являются составными значениями(структурами): они представляют собой коллекции свойств, или именованных значений.
+                </p>
+                <p>
+                    Объявляются объекты при помощи объектного литерала {}:
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->var a = {};
+<!-- example --></code></pre>
+                <p>
+                    Свойство объекта так же также называют полем объекта. Поле объекта может хранить любой тип данных, включая функции, у таких свойст есть специальное название - метод.
+                </p>
+                <p>
+                    Задать поле объекта можна через синтаксис ключ-значение внутри литерала объекта.
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->var a = {myKey : 0, mySecondKey: 5};
+<!-- example --></code></pre>
+                <p>
+                    А получить доступ к полю можна с помощью такого синтаксиса:
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->var a = {myKey : 0, mySecondKey: 5};
+<!-- example -->console.log(a.mySecondKey);
+<!-- example --></code></pre>
+            </article>
+        </section>
+<!---   SECTION5      -->
+        <section class="clearfix" id="s5">
+            <article class="main-article fl">
+                <h3>5. Иммутабельность примитивов и ссылочность объектного типа</h3>
+                <p>
+                    Между простыми значениями (undefined, null, boolean, числами, строками, символами) и объектами (включая массивы и функции) в языке JavaScript имеются фундаментальные отличия. Простые значения являются неизменяемыми (иммутабельными).
+                </p>
+                <p>
+                    Простое значение невозможно изменить (трансформировать/модифицировать). Это очевидно для чисел и логических значений – нет никакого смысла изменять значение числа. Однако для строк это менее очевидно. Поскольку строки являются массивами символов, вполне естественно было бы ожидать наличие возможности изменять символы в той или иной позиции в строке. В действительности JavaScript не позволяет сделать это, и все строковые методы, которые, на первый взгляд, возвращают измененную строку, на самом деле возвращают новое строковое значение
+                </br>
+                </br>
+                Например:
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->var s = "hello"; // Из­на­чаль­но име­ет­ся не­ко­то­рый текст из строч­ных сим­во­лов
+<!-- example -->s.toUpperCase(); // Вер­нет "HELLO", но зна­че­ние s при этом не из­ме­нит­ся
+<!-- example -->console.log(s); // "hello": ори­ги­наль­ная стро­ка не из­ме­ни­лась
+<!-- example --></code></pre>
+                <p>
+                    Кроме того, величины простых типов сравниваются по значению: две величины считаются одинаковыми, если они имеют одно и то же значение. Для чисел, логических значений, null и undefined это выглядит очевидным: нет никакого другого способа сравнить их. Однако для строк это утверждение не выглядит таким очевидным. При сравнении двух строковых значений JavaScript считает их одинаковыми тогда и только тогда, когда они имеют одинаковую длину и содержат одинаковые символы в соответствующих позициях.
+                </p>
+                <p>
+                    Объекты отличаются от простых типов. Во-первых, они являются изменяемы­ми – их значения можно изменять:
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->var o = {
+<!-- example -->    x : 1
+<!-- example -->}; // На­чаль­ное зна­че­ние объ­ек­та
+<!-- example -->o.x = 2; // Из­ме­нить, из­ме­нив зна­че­ние свой­ст­ва
+<!-- example -->o.y = 3; // Из­ме­нить, до­ба­вив но­вое свой­ст­во
+<!-- example --></code></pre>
+                <p>
+                    Объекты не сравниваются по значению: два объекта не считаются равными, даже если они будут иметь одинаковые наборы свойств с одинаковыми значениями. И два массива не считаются равными, даже если они имеют один и тот же набор элементов, следующих в том же порядке:
+                </p>
+<!-- example --><pre><code class="javascript">'use strict';
+<!-- example -->var o = {x:1}, p = {x:1}; // Два объ­ек­та с оди­на­ко­вы­ми свой­ст­ва­ми
+<!-- example -->o === p; // false
+<!-- example --></code></pre>
+                <p>
+                    Чтобы подчеркнуть отличие от простых типов JavaScript, объекты иногда называют ссылочными типами. Если следовать этой терминологии, значениями объектов являются ссылки, и можно сказать, что объекты сравниваются по ссылке: значения двух объектов считаются равными тогда и только тогда, когда они ссы­лаются на один и тот же объект в памяти.
+                </p>
+                <p>
+                    Если в программе потребуется создать новую копию объекта или массива, необходимо будет явно скопировать свойства объекта или элементы массива. 
+                </p>
+                <p>
+                    Болие детально особенности объектного типа мы рассмотрим в последующих главах курса.
+                </p>
+            </article>
+        </section>
+<!---   SECTION*      -->
+        <section class="clearfix" id="s*">
+            <article class="main-article fl">
+                <h3>*. Упражнения</h3>
+                <h4>1. User</h4>
+                <p> 
+                    Создайте пустой объект user. Добавьте свойство name со значением Вася. Добавьте свойство surname со значением Петров. Поменяйте значение name на Сергей. Удалите свойство name из объекта.
+                </p>
+            </article>
+        </section>
+    </main>
+    <footer></footer>
+</div>
+<script src="../js/highlight.pack.js"></script>
+<script src="../js/highlightjs-line-numbers.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+<script src="../js/main.js"></script>
+</body>
+</html>
+
+<!--
+    <div class="article-images">
+        <img src="images/web publishing.png" alt="">
+    </div>
+
+    <div class="article-images small-img-7">
+        <img src="images/if else example images.jpg" alt="">
+    </div>
+
+    <div class="article-images small-img-7">
+        <img src="images/if else example images.jpg" alt="">
+    </div>
+-->
+<!--
+    <div class="object-method-wrapper">
+        <div class="object-method">
+            <h5>alert()</h5>
+        <p>Выводит на экран окно с сообщением.</p>
+    </div>
+    ....
+    </div>
+-->
