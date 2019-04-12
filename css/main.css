@@ -1,7 +1,9 @@
+@import 'variables.css';
 @import 'font.css';
 @import 'mainpage.css';
 @import 'pickButtonsBar.css';
 @import 'templates.css';
+
 /*NORMALIZE*/
 html, p { 
   margin: 0;
@@ -26,8 +28,12 @@ img {
 }
 
 a {
-  text-decoration:none;
-  color:cornflowerblue;
+  text-decoration: none;
+  color: var(--color-blue);
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 div, section, article {
@@ -149,7 +155,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 64px;
+  height: 58px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.137255);
   background: white;
   z-index: 999;
@@ -183,7 +189,10 @@ main {
 h1.title {
   margin-bottom: 36px;
   padding-top: 15px;
-  font: 400 56px/64px 'Roboto';
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font: 400 48px/1.4em 'Roboto';
+  white-space: nowrap;
   color: rgba(255,82,82,0.87);
   border-top: 2px solid rgba(0,0,0,0.4);
 }
@@ -208,6 +217,10 @@ h3.content-list + ul.plan li {
 h3.content-list + ul.plan li a {
   display: block;
   color: #ff5252;
+}
+
+h3.content-list + ul.plan li a:hover {
+  text-decoration: underline;
 }
 
 section {
